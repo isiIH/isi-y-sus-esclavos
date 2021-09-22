@@ -19,6 +19,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #d6f8b8;
 }
 
 main {
@@ -117,11 +118,12 @@ a {
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  color: #6b7b8e;
 }
 
-.title,
 .description {
   text-align: center;
+  color: #6b7b8e;
 }
 
 .description {
@@ -152,19 +154,20 @@ code {
   margin: 1rem;
   flex-basis: 80%;
   padding: 1.5rem;
-  text-align: left;
-  color: inherit;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #6b7b8e;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border: 0.5rem solid #acdeaa;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: rgb(60, 141, 143);
+  border-color: #1c542d;
 }
 
 .card h3 {
@@ -182,9 +185,52 @@ code {
   height: 1em;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+.calendario {
+  width: 85rem;
+  height: 30rem;
+  background: lightseagreen;
+
+  animation-name: ejemplo;
+  animation-duration: 4s;
+  background-position: right;
+  margin-top: 7rem;
+  margin-left: 45rem;
+  margin-right: 25rem;
+}
+.textoCalendario {
+  color: transparent;
+}
+.calendario:hover {
+  text-align: center;
+  background: lightgreen;
+  font-size: large;
+  font-size: 10rem;
+}
+.textoCalendario:hover {
+  color: lightseagreen;
+}
+
+.listaIzq {
+  position: absolute;
+  margin-right: 100rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+@keyframes ejemplo {
+  from {
+    background-color: red;
   }
+  to {
+    background-color: lightseagreen;
+  }
+}
+.botonbacan {
+  width: 100px;
+  height: 100px;
+  background-color: lightseagreen;
+  animation-name: ejemplo;
+  animation-duration: 4s;
+}
+.xd {
+  font-size: 1rem;
 }
