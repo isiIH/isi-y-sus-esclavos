@@ -5,22 +5,17 @@ const Index = () => {
   return (
     <div className="container">
       <Head>
-        <title>xdxdxd</title>
+        <title>Calendario Academico</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Image
-          src="/images/eye.png"
-          height={294} // Desired size with correct aspect ratio
-          width={470} // Desired size with correct aspect ratio
-          alt="ojo"
-        />
+        
 
-        <h1 className="title">¿Cómo ha sido tu semana?</h1>
+        <h1 className="title">2021</h1>
 
         <p className="description">
-          Este código está en <code>pages/index.js</code>
+          Seleccione area de interes
         </p>
 
         <div className="grid">
@@ -30,7 +25,7 @@ const Index = () => {
               query: { opt: 0 },
             }}
           >
-            <a className="card">Excelente!</a>
+            <a className="card">Becas</a>
           </Link>
           <Link
             href={{
@@ -38,7 +33,7 @@ const Index = () => {
               query: { opt: 1 },
             }}
           >
-            <a className="card">Más o menos no mas!</a>
+            <a className="card">Inscripciones</a>
           </Link>
           <Link
             href={{
@@ -46,18 +41,18 @@ const Index = () => {
               query: { opt: 2 },
             }}
           >
-            <a className="card">Horrible! :(</a>
+            <a className="card">Examenes</a>
           </Link>
         </div>
       </main>
 
       <footer>
-        <a href="https://github.com/PabloSzx/INFO104-2021-1" target="_blank">
-          Repositorio y tutorial
+        <a className="xd" href="https://github.com/PabloSzx/INFO104-2021-1" target="_blank">
+          La isi hizo esto.
         </a>
         &nbsp;-&nbsp;
         <Link href="/about">
-          <a>Sobre esta página</a>
+          <a className="xd">Derechos Reservados 2021.</a>
         </Link>
       </footer>
     </div>
