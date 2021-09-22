@@ -15,7 +15,7 @@ const Index = () => {
         <h1 className="title">2021</h1>
 
         <p className="description">
-          Seleccione area de interes
+          SELECCIONE AREA DE INTERES
         </p>
 
         <div className="grid">
