@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <div className="container">
       <Head>
-        <title>calen Academico</title>
+        <title>calendario Academico</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
