@@ -5,12 +5,12 @@ const Index = () => {
   return (
     <div className="container">
       <Head>
-        <title>Calendario Academico</title>
+        <title>calen Academico</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        
+
 
         <h1 className="title">2021</h1>
 
