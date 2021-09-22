@@ -1,0 +1,60 @@
+{
+    "titulo"   : "Calendario Académico de Pregrado Uach",
+    "año"    : "2021",
+    "eventos" : [
+        {
+            "titulo" : "Primer periodo de matricula",
+            "descripcion" : "Primer periodo de matricula para estudiantes de cursos superiores",
+            "fechaInicio" : "13-01",
+            "fechaTermino" : "27-02",
+            "tipo" : "academico",
+            "keywords" : ["matricula"]
+        },
+
+        {
+            "titulo" : "Primer periodo de matricula",
+            "descripcion" : "Primer periodo de matricula para estudiantes admisión 2021",
+            "fechaInicio" : "01-03",
+            "fechaTermino" : "10-03",
+            "tipo" : "academico",
+            "keywords" : ["admision 2021", "matricula"]
+        
+        },
+
+        {
+            "titulo" : "Inicio de clases",
+            "descripcion" : "",
+            "fechaInicio" : "03-03",
+            "fechaTermino" : "",
+            "tipo" : "academico",
+            "keywords" : ""
+        },
+
+        {
+            "titulo" : "Segundo periodo de matricula",
+            "descripcion" : "Segundo periodo de matricula para estudiantes de cursos superiores",
+            "fechaInicio" : "06-03",
+            "fechaTermino" : "14-03",
+            "tipo" : "academico",
+            "keywords" : ["matricula"]
+        },
+
+        {
+            "titulo" : "Modificaciones curriculares",
+            "descripcion" : "Inicio de período para que las Direcciones de Escuela presenten Modificaciones Curriculares Menores al Departamento de Aseguramiento de la Calidad e Innovación Curricular (DACIC), para ser implementadas desde el segundo semestre 2021.",
+            "fechaInicio" : "15-03",
+            "fechaTermino" : "",
+            "tipo" : "academico",
+            "keywords" : ""
+        },
+
+        {
+            "titulo" : "Acreditación socioeconómica",
+            "descripcion" : "Primer período de Acreditación Socioeconómica estudiantes nuevos y de cursos superiores, que el MINEDUC informe que deben presentar documentos de respaldo del FUAS, en página www.becasycreditos.cl",
+            "fechaInicio" : "15-03",
+            "fechaTermino" : "",
+            "tipo" : "beneficios",
+            "keywords" : ["becas", "FUAS"]
+        }
+    ]
+}
