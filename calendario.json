@@ -435,7 +435,318 @@
         },
 
         {
+            "titulo" : "Período para presentar Modificaciones Curriculares menores",
+            "semestre" : "2",
+            "descripcion" : "Inicio de período para que las Direcciones de Escuela presenten Modificaciones Curriculares Menores al Departamento de Aseguramiento de la Calidad e Innovación Curricular (DACIC), para ser implementadas desde el primer semestre 2022.",
+            "fechaInicio" : "02-08-2021",
+            "fechaTermino" : "",
+            "tipo" : "funcionarios"
+        },
 
+        {
+            "titulo" : "Resultados/Renovación becas",
+            "semestre" : "2",
+            "descripcion" : "Publicación de resultados, asignación inicial y renovación de gratuidad, becas y FSCU, de postulantes FUAS octubre-noviembre y febrero-marzo.",
+            "fechaInicio" : "02-08-2021",
+            "fechaTermino" : "",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Período de matrícula",
+            "semestre" : "2",
+            "descripcion" : "Período de matrícula segundo semestre para estudiantes en situaciones especiales",
+            "fechaInicio" : "02-08-2021",
+            "fechaTermino" : "06-08-2021",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Inicio de actividades académicas",
+            "semestre" : "2",
+            "descripcion" : "",
+            "fechaInicio" : "16-08-2021",
+            "fechaTermino" : "",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Inscripción de asignaturas",
+            "semestre" : "2",
+            "descripcion" : "Período de inscripción de asignaturas y modificación de la propuesta, a través de www.uach.cl/alumnos",
+            "fechaInicio" : "16-08-2021",
+            "fechaTermino" : "27-08-2021",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Formación en Docencia Universitaria",
+            "semestre" : "2",
+            "descripcion" : "DACIC - Curso de Formación en Docencia Universitaria para Habilitación Pedagógica",
+            "fechaInicio" : "09-08-2021",
+            "fechaTermino" : "13-08-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Postulación/Renovación Bono de Alimentación",
+            "semestre" : "2",
+            "descripcion" : "Período de postulación y renovación del Bono de Alimentación, a través de www.uach.cl/alumnos.",
+            "fechaInicio" : "01-08-2021",
+            "fechaTermino" : "31-08-2021",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Postulación Laborancias",
+            "semestre" : "2",
+            "descripcion" : "Período de postulación a la Beca de Estímulo Universitario (laborancias) a través de www.uach.cl/alumnos.",
+            "fechaInicio" : "01-08-2021",
+            "fechaTermino" : "31-08-2021",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Solicitudes de alumnos laborantes",
+            "semestre" : "2",
+            "descripcion" : "Periodo para que las Unidades soliciten los estudiantes laborantes al Departamento de Bienestar Estudiantil, a través de www.uach.cl/funcionarios",
+            "fechaInicio" : "01-08-2021",
+            "fechaTermino" : "31-08-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Renovación de becas",
+            "semestre" : "2",
+            "descripcion" : "Período de renovación de la Beca de mantención JUNAEB (Beca Presidente de la República, Beca Indígena y Beca de Residencia Indígena, Beca Integración Territorial; Beca Patagonia; Beca Aysén), segundo semestre 2021",
+            "fechaInicio" : "01-08-2021",
+            "fechaTermino" : "31-08-2021",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Proyectos FDI de Iniciativas Estudiantiles MINEDUC",
+            "semestre" : "2",
+            "descripcion" : "Último día del periodo de postulaciones, retiro de formularios y bases, para proyectos FDI de Iniciativas Estudiantiles del MINEDUC (*).",
+            "fechaInicio" : "",
+            "fechaTermino" : "Fecha sujeta a cambio por JUNAEB",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Inicio de actividades MCM DACIC",
+            "semestre" : "2",
+            "descripcion" : "DACIC: Inicio de actividades para procesos de Modificaciones Curriculares Menores (MCM)",
+            "fechaInicio" : "16-08-2021",
+            "fechaTermino" : "",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Intercambio estudiantil 2022",
+            "semestre" : "2",
+            "descripcion" : "Último día para que estudiantes de cursos superiores postulen a las distintas modalidades de intercambio estudiantil a universidades socias (extranjeras y nacionales), a través de la Oficina de Movilidad Estudiantil (OME), para el primer semestre de 2022.",
+            "fechaInicio" : "",
+            "fechaTermino" : "30-08-2021",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Proyectos de innovación curricular",
+            "semestre" : "2",
+            "descripcion" : "Último día para que las Facultades y Sedes presenten proyectos de innovación curricular de carreras a la Vicerrectoría Académica.",
+            "fechaInicio" : "",
+            "fechaTermino" : "31-08-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "67° Aniversario UACH",
+            "semestre" : "2",
+            "descripcion" : "Ceremonia de celebración 67° Aniversario de la Universidad Austral de Chile.",
+            "fechaInicio" : "07-09-2021",
+            "fechaTermino" : "",
+            "tipo" : "cultural"
+        },
+
+        {
+            "titulo" : "Actualización de asignaturas",
+            "semestre" : "2",
+            "descripcion" : "Último día para que los docentes responsables actualicen las características de sus asignaturas y publiquen el programa en el sistema académico.",
+            "fechaInicio" : "",
+            "fechaTermino" : "10-09-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Solicitud de suspensión del semestre",
+            "semestre" : "2",
+            "descripcion" : "Último día para que los estudiantes ingresen solicitudes de suspensión de semestre a través de www.uach.cl/alumnos.",
+            "fechaInicio" : "",
+            "fechaTermino" : "30-09-2021",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Solicitud ampliación de plazo de titulación",
+            "semestre" : "2",
+            "descripcion" : "Último día para que los estudiantes de carreras semestrales, ingresen su solicitud de ampliación de plazo de titulación, RAE 2008, en www.uach.cl/alumnos",
+            "fechaInicio" : "",
+            "fechaTermino" : "30-09-2021",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Asignaturas optativas 2022",
+            "semestre" : "2",
+            "descripcion" : "Inicio período para que las unidades académicas presenten asignaturas optativas a la Dirección de Estudios de Pregrado, Registro Académico Estudiantil y la Unidad de Programas Complementarios, para ser implementadas el primer semestre 2022.",
+            "fechaInicio" : "",
+            "fechaTermino" : "30-09-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Postulación de becas 2022",
+            "semestre" : "2",
+            "descripcion" : "Período de postulación a Gratuidad, Becas de Arancel y Créditos, para estudiantes de cursos superiores en el sitio www.fuas.cl para año 2022",
+            "fechaInicio" : "Se completa el FUAS en el mes de octubre y parte de noviembre, fecha exacta es publicada por el MINEDUC en octubre de cada año.",
+            "fechaTermino" : "",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Intercambio estudiantil",
+            "semestre" : "2",
+            "descripcion" : "Último día para que estudiantes de otras casas de estudio (nacionales e internacionales), interesados en hacer intercambio estudiantil en nuestra universidad, envíen sus postulaciones a la Oficina de Movilidad Estudiantil (OME) para realizar estudios durante el primer semestre de 2022.",
+            "fechaInicio" : "",
+            "fechaTermino" : "15-10-2021",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Resultados/Renovación de becas",
+            "semestre" : "2",
+            "descripcion" : "Publicación de resultados, asignación inicial y renovación de Gratuidad, Becas y FSCU, para postulantes FUAS.",
+            "fechaInicio" : "Publicación de resultados de beneficios sujeta a cambio Mineduc.",
+            "fechaTermino" : "",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Inicio de actividades DACIC",
+            "semestre" : "2",
+            "descripcion" : "DACIC: Inicio de actividades para procesos de Innovación Curricular/Creación de Carreras/Programas, los cuales continuarán en desarrollo para culminar el año 2022",
+            "fechaInicio" : "25-10-2021",
+            "fechaTermino" : "",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Presentación asignaturas optativas",
+            "semestre" : "2",
+            "descripcion" : "Último día para que las unidades académicas presenten asignaturas optativas a la Dirección de Estudios de Pregrado, Registro Académico Estudiantil y la Unidad de Programas Complementarios, para ser implementadas el primer semestre 2022.",
+            "fechaInicio" : "25-10-2021",
+            "fechaTermino" : "",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Formulación Solicitudes de asignaturas 2022",
+            "semestre" : "2",
+            "descripcion" : "Período para que las Escuelas formulen las solicitudes de asignaturas para el primer semestre 2022 (carreras semestrales y anuales) a las Unidades Académicas.",
+            "fechaInicio" : "08-11-2021",
+            "fechaTermino" : "19-11-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Ingreso Especiales",
+            "semestre" : "2",
+            "descripcion" : "Período de postulación a Ingreso Especiales a través de www.uach.cl",
+            "fechaInicio" : "12-11-2021",
+            "fechaTermino" : "12-12-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Solicitudes de anulación",
+            "semestre" : "2",
+            "descripcion" : "Último día para que los estudiantes de carreras semestrales ingresen las solicitudes de anulación de semestre en www.uach.cl/alumnos",
+            "fechaInicio" : "",
+            "fechaTermino" : "24-11-2021",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Anulación de asignaturas",
+            "semestre" : "2",
+            "descripcion" : "Último día para que los estudiantes de carreras semestrales, anulen dos asignatura o módulo a través de www.uach.cl/alumnos",
+            "fechaInicio" : "",
+            "fechaTermino" : "24-11-2021",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Definición oferta de asignaturas 2022",
+            "semestre" : "2",
+            "descripcion" : "Período para que las Unidades Académicas definan la oferta de asignaturas para el primer semestre 2022 (carreras semestrales y anuales)",
+            "fechaInicio" : "24-11-2021",
+            "fechaTermino" : "03-12-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Resolución solicitudes de anulación",
+            "semestre" : "2",
+            "descripcion" : "Último día para que los Directores de Escuela, resuelvan las solicitudes de anulación de asignaturas realizadas por los estudiantes.",
+            "fechaInicio" : "",
+            "fechaTermino" : "24-11-2021",
+            "tipo" : "funcionarios"
+        },
+
+        {
+            "titulo" : "Ultimo día de clases segundo semestre",
+            "semestre" : "2",
+            "descripcion" : "",
+            "fechaInicio" : "03-12-2021",
+            "fechaTermino" : "",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Período de exámenes finales.",
+            "semestre" : "2",
+            "descripcion" : "",
+            "fechaInicio" : "06-12-2021",
+            "fechaTermino" : "20-12-2021",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Renovación de becas",
+            "semestre" : "2",
+            "descripcion" : "Período de renovación de Beca Presidente de la República, Beca Indígena y Beca de Residencia Indígena, Beca Integración Territorial; Beca Patagonia; Beca Aysén para primer semestre del año 2022 en el sitio portalbecas.junaeb.cl/sinabweb/",
+            "fechaInicio" : "01-12-2021",
+            "fechaTermino" : "30-12-2021",
+            "tipo" : "beneficios"
+        },
+
+        {
+            "titulo" : "Último día para el ingreso de las calificaciones",
+            "semestre" : "2",
+            "descripcion" : "",
+            "fechaInicio" : "07-01-2022",
+            "fechaTermino" : "",
+            "tipo" : "academico"
+        },
+
+        {
+            "titulo" : "Formación en Docencia Universitaria",
+            "semestre" : "2",
+            "descripcion" : "DACIC: Curso de Formación en Docencia Universitaria para Habilitación Pedagógica",
+            "fechaInicio" : "03-01-2022",
+            "fechaTermino" : "07-01-2022",
+            "tipo" : "funcionarios"
         }
 
     ]
