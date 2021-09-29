@@ -61,7 +61,6 @@ const Index = () => {
         </Link>
         </div>
 
-        <div><p>Y aquí iría el calendario, si tan sólo supiera cómo hacerlo unu</p></div>
     </main>
 
     <footer>

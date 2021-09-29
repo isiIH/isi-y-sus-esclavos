@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="container">
       <Head>
-        <title>INFO104 About</title>
+        <title>About</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -17,8 +17,8 @@ const About = () => {
       </main>
 
       <footer>
-        <a href="https://github.com/PabloSzx/INFO104-2021-1" target="_blank">
-          Repositorio y tutorial
+        <a href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
+          Repositorio
         </a>
       </footer>
     </div>
