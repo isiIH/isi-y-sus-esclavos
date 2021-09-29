@@ -2,61 +2,61 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 const Index = () => {
-  return (
+    return (
     <div className="container">
-      <Head>
-        <title>calendario Academico</title>
+    <Head>
+        <title>Calendario Academico</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+    </Head>
 
-      <main>
+    <main>
 
 
         <h1 className="title">2021</h1>
 
         <p className="description">
-          SELECCIONE AREA DE INTERES
+        SELECCIONE AREA DE INTERES
         </p>
 
         <div className="grid">
-          <Link
+        <Link
             href={{
-              pathname: "/response",
-              query: { opt: 0 },
+            pathname: "/response",
+            query: { opt: 0 },
             }}
-          >
+        >
             <a className="card">Becas</a>
-          </Link>
-          <Link
+        </Link>
+        <Link
             href={{
-              pathname: "/response",
-              query: { opt: 1 },
+            pathname: "/response",
+            query: { opt: 1 },
             }}
-          >
+        >
             <a className="card">Inscripciones</a>
-          </Link>
-          <Link
+        </Link>
+        <Link
             href={{
-              pathname: "/response",
-              query: { opt: 2 },
+            pathname: "/response",
+            query: { opt: 2 },
             }}
-          >
+        >
             <a className="card">Examenes</a>
-          </Link>
+        </Link>
         </div>
-      </main>
+    </main>
 
-      <footer>
-        <a className="xd" href="https://github.com/PabloSzx/INFO104-2021-1" target="_blank">
-          La isi hizo esto.
+    <footer>
+        <a className="xd" href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
+        La isi hizo esto.
         </a>
         &nbsp;-&nbsp;
         <Link href="/about">
-          <a className="xd">Derechos Reservados 2021.</a>
+        <a className="xd">Derechos Reservados 2021.</a>
         </Link>
-      </footer>
+    </footer>
     </div>
-  );
+);
 };
 
 export default Index;
