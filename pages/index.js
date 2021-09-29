@@ -5,14 +5,14 @@ const Index = () => {
     return (
     <div className="container">
     <Head>
-        <title>Calendario Academico</title>
+        <title>Calendario Académico</title>
         <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <main>
 
 
-        <h1 className="title">2021</h1>
+        <h1 className="title">Calendario Académico UACH 2021</h1>
 
         <p className="description">
         SELECCIONE AREA DE INTERES
@@ -25,7 +25,7 @@ const Index = () => {
             query: { opt: 0 },
             }}
         >
-            <a className="card">Becas</a>
+            <a className="card">Beneficios</a>
         </Link>
         <Link
             href={{
@@ -33,7 +33,7 @@ const Index = () => {
             query: { opt: 1 },
             }}
         >
-            <a className="card">Inscripciones</a>
+            <a className="card">Académico</a>
         </Link>
         <Link
             href={{
@@ -41,9 +41,27 @@ const Index = () => {
             query: { opt: 2 },
             }}
         >
-            <a className="card">Examenes</a>
+            <a className="card">Funcionarios</a>
+        </Link>
+        <Link
+            href={{
+            pathname: "/response",
+            query: { opt: 2 },
+            }}
+        >
+            <a className="card">Cultural</a>
+        </Link>
+        <Link
+            href={{
+            pathname: "/response",
+            query: { opt: 2 },
+            }}
+        >
+            <a className="card">Otros</a>
         </Link>
         </div>
+
+        <div><p>Y aquí iría el calendario, si tan sólo supiera cómo hacerlo unu</p></div>
     </main>
 
     <footer>

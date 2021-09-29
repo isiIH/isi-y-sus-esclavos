@@ -73,6 +73,10 @@ a {
   text-align: center;
 }
 
+.title {
+  text-align: center;
+}
+
 .currentPage {
   border-bottom: 3px solid #0070f3 !important;
   color: #333333;
@@ -150,24 +154,23 @@ code {
   margin-top: 3rem;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 80%;
+.card{
+  margin: none;
   padding: 1.5rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: bolder;
   color: #6b7b8e;
+  background-color: #acdeaa;
   text-decoration: none;
-  border: 0.5rem solid #acdeaa;
+  border: none;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: rgb(60, 141, 143);
-  border-color: #1c542d;
+  background-color: #9fcc9e;
 }
 
 .card h3 {
