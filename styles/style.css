@@ -184,6 +184,10 @@ code {
   line-height: 1.5;
 }
 
+.App h1 {
+  text-align: center;
+}
+
 .logo {
   height: 1em;
 }
