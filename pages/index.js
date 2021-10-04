@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
+import React from "react";
+import { Chrono } from "react-chrono";
+import data from "../public/data/data.js";
+
 const Index = () => {
     return (
     <div className="container">
@@ -59,6 +62,27 @@ const Index = () => {
         >
             <a className="card">Otros</a>
         </Link>
+
+            <div className="uwu" style={{ width: "100%", height: "39.375rem" }}>
+                <Chrono
+                    items={data}
+                    disableNavOnKey
+                    slideShow
+                    //enableOutline
+                    cardHeight={100}
+                    cardWidth={500}
+                    useReadMore={false}
+                    borderLessCards
+                    theme={{
+                        primary: "black",
+                        secondary: "orange",
+                        cardBgColor: "LightGray",
+                        cardForeColor: "black",
+                        titleColor: "black"
+                    }}
+                    mode="VERTICAL_ALTERNATING" 
+                />
+            </div>
         </div>
 
     </main>

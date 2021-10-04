@@ -113,7 +113,7 @@
         {
             "titulo" : "Solicitudes de alumnos laborantes",
             "semestre" : "1",
-            "beneficios" : "Periodo en que las Unidades solicitan al Departamento de Bienestar Estudiantil los estudiantes laborantes, a través de www.uach.cl/funcionarios",
+            "descripcion" : "Periodo en que las Unidades solicitan al Departamento de Bienestar Estudiantil los estudiantes laborantes, a través de www.uach.cl/funcionarios",
             "fechaInicio" : "01-03-2021",
             "fechaTermino" : "31-03-2021",
             "tipo" : "funcionarios"
@@ -257,7 +257,7 @@
         {
             "titulo" : "Intercambio estudiantil 2° semestre",
             "semestre" : "1",
-            "descipcion" : "Último día para que estudiantes de cursos superiores postulen a las distintas modalidades de intercambio estudiantil a universidades socias (extranjeras y nacionales), a través de la Oficina de Movilidad Estudiantil (OME), para el segundo semestre de 2021.",
+            "descripcion" : "Último día para que estudiantes de cursos superiores postulen a las distintas modalidades de intercambio estudiantil a universidades socias (extranjeras y nacionales), a través de la Oficina de Movilidad Estudiantil (OME), para el segundo semestre de 2021.",
             "fechaInicio" : "",
             "fechaTermino" : "30-04-2021",
             "tipo" : "beneficios"
