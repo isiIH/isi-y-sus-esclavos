@@ -10,59 +10,55 @@ const Index = () => {
     <Head>
         <title>Calendario Académico</title>
         <link rel="icon" href="/favicon.ico" />
+        
+        <script src="https://kit.fontawesome.com/c1eae85dfa.js" crossorigin="anonymous"></script>
+        <script src="app.js" defer></script>
     </Head>
 
     <main>
 
 
+
         <h1 className="title">Calendario Académico UACH 2021</h1>
 
-        <p className="description">
-        SELECCIONE AREA DE INTERES
-        </p>
-
-        <div className="grid">
-        <Link
-            href={{
-            pathname: "/response",
-            query: { opt: 0 },
-            }}
-        >
-            <a className="card">Beneficios</a>
-        </Link>
-        <Link
-            href={{
-            pathname: "/response",
-            query: { opt: 1 },
-            }}
-        >
-            <a className="card">Académico</a>
-        </Link>
-        <Link
-            href={{
-            pathname: "/response",
-            query: { opt: 2 },
-            }}
-        >
-            <a className="card">Funcionarios</a>
-        </Link>
-        <Link
-            href={{
-            pathname: "/response",
-            query: { opt: 2 },
-            }}
-        >
-            <a className="card">Cultural</a>
-        </Link>
-        <Link
-            href={{
-            pathname: "/response",
-            query: { opt: 2 },
-            }}
-        >
-            <a className="card">Otros</a>
-        </Link>
-
+        
+        <nav class="menu">
+            <label class="logo">Calendario UACh</label>
+            <ul class="menu-items">
+                <li><Link href={{
+                pathname: "/response",
+                query: { opt: 0 },
+                }}><a>Inicio</a></Link></li>
+                <li><Link href={{
+                pathname: "/response",
+                query: { opt: 0 },
+                }}><a href="#">Beneficios</a></Link></li>
+                <li><Link href={{
+                pathname: "/response",
+                query: { opt: 0 },
+                }}><a href="#">Academico</a></Link></li>
+                <li><Link href={{
+                pathname: "/response",
+                query: { opt: 0 },
+                }}><a href="#">Funcionarios</a></Link></li>
+                <li><Link href={{
+                pathname: "/response",
+                query: { opt: 0 },
+                }}><a href="#"> Cultural</a></Link></li>
+                <li><Link href={{
+                pathname: "/response",
+                query: { opt: 0 },
+                }}><a href="#">Otros</a></Link></li>
+            </ul>
+            <span class="btn-menu">
+                <i class="fa fa-bars"></i>
+            </span>
+        
+        
+        </nav>
+        
+         
+        
             <div className="uwu" style={{ width: "100%", height: "39.375rem" }}>
                 <Chrono
                     items={data}
@@ -83,9 +79,9 @@ const Index = () => {
                     mode="VERTICAL_ALTERNATING" 
                 />
             </div>
-        </div>
-
+        
     </main>
+    
 
     <footer>
         <a className="xd" href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
