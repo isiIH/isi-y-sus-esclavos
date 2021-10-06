@@ -3,9 +3,9 @@ import Link from "next/link";
 import React from "react";
 import dynamic from "next/dynamic";
 const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
-import data from "../public/data/data2.js";
+import data from "../public/data/dataBeneficios.js";
 
-const Index = () => {
+const beneficios = () => {
 
     let nombres = [];
     let datos = data;
@@ -32,7 +32,7 @@ const Index = () => {
                     <ul class="menu-items">
                         <li><Link href="/" ><a>Inicio</a></Link></li>
 
-                        <li><Link href="/beneficios"><a>Beneficios</a></Link></li>
+                        <li><Link href="/beneficios" ><a>Beneficios</a></Link></li>
 
                         <li><Link href={{
                             pathname: "/response",
@@ -65,11 +65,11 @@ const Index = () => {
 
                 <div className="container">
 
-                    <main>
-                        <div className="time-line-container">
-                            <TimeLine data={datos} />
-                        </div>
-                    </main>
+
+                    <div className="time-line-container">
+                        <TimeLine data={datos} />
+                    </div>
+
                 </div>
 
             </main>
@@ -85,7 +85,14 @@ const Index = () => {
                 </Link>
             </footer>
         </div>
+
+
+
+
+
+
     );
+
 };
 
-export default Index;
+export default beneficios;
