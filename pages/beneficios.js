@@ -14,7 +14,7 @@ const beneficios = () => {
         <div className="container">
             <Head>
                 <title>Calendario Académico</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/uach.png" />
 
                 <script src="https://kit.fontawesome.com/c1eae85dfa.js" crossorigin="anonymous"></script>
                 <script src="app.js" defer></script>

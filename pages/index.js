@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import {Chrono} from "react-chrono";
+import data2 from "../public/data/data.js";
 import dynamic from "next/dynamic";
 const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
 import data from "../public/data/data2.js";
@@ -26,9 +28,9 @@ const Index = () => {
                 <h1 className="title">Calendario Académico UACH 2021</h1>
 
 
-                <nav class="menu">
-                    <label class="logo">Calendario UACh</label>
-                    <ul class="menu-items">
+                <nav className="menu">
+                    <label className="logo">Calendario UACh</label>
+                    <ul className="menu-items">
                         <li><Link href="/" ><a>Inicio</a></Link></li>
 
                         <li><Link href="/beneficios"><a>Beneficios</a></Link></li>
@@ -69,6 +71,24 @@ const Index = () => {
                             <TimeLine data={datos} />
                         </div>
                     </main>
+                </div>
+
+                <div style={{ width: "900px", height: "700px" }}>
+                    <Chrono 
+                        items={data2} 
+                        enableOutline
+                        //slideShow
+                        useReadMore={false}
+                        cardHeight="100px"
+                        theme={{ 
+                            primary: "black",
+                            secondary: "orange",
+                            cardBgColor: "#8fbbaf",
+                            cardForeColor: "black",
+                            titleColor: "black"
+                        }}
+                        mode="VERTICAL_ALTERNATING"
+                    />
                 </div>
 
             </main>
