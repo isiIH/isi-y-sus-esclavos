@@ -6,7 +6,7 @@ import { Chrono } from "react-chrono";
 const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });*/
 import dataAcademico from "../public/data/dataAcademico.js";
 
-const beneficios = () => {
+const academico = () => {
 
 
 
@@ -103,4 +103,4 @@ const beneficios = () => {
 
 };
 
-export default beneficios;
+export default academico;
