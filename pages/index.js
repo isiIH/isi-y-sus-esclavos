@@ -35,10 +35,7 @@ const Index = () => {
 
                         <li><Link href="/beneficios"><a>Beneficios</a></Link></li>
 
-                        <li><Link href={{
-                            pathname: "/response",
-                            query: { opt: 0 },
-                        }}><a href="#">Academico</a></Link></li>
+                        <li><Link href="/academico" ><a>Academico</a></Link></li>
 
                         <li><Link href={{
                             pathname: "/response",

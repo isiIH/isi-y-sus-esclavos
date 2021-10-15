@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import {Chrono} from "react-chrono";
+import { Chrono } from "react-chrono";
 import dynamic from "next/dynamic";
 const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
-import data from "../public/data/dataBeneficios.js";
-import data2 from "../public/data/data2Beneficios.js";
+import data from "../public/data/dataAcademico.js";
+import data2 from "../public/data/data2Academico.js";
 
-const beneficios = () => {
+const academico = () => {
 
     let nombres = [];
     let datos = data;
@@ -60,25 +60,25 @@ const beneficios = () => {
 
                 </nav>
 
-                <h2>BENEFICIOS</h2> 
+                <h2>ACADÉMICO</h2>
 
                 <div className="container">
 
-
-                    <div className="time-line-container">
-                        <TimeLine data={datos} />
-                    </div>
-
+                    <main>
+                        <div className="time-line-container">
+                            <TimeLine data={datos} />
+                        </div>
+                    </main>
                 </div>
 
                 <div style={{ width: "900px", height: "700px" }}>
-                    <Chrono 
-                        items={data2} 
+                    <Chrono
+                        items={data2}
                         enableOutline
                         //slideShow
                         useReadMore={false}
                         cardHeight="100px"
-                        theme={{ 
+                        theme={{
                             primary: "black",
                             secondary: "orange",
                             cardBgColor: "#8fbbaf",
@@ -88,6 +88,8 @@ const beneficios = () => {
                         mode="VERTICAL_ALTERNATING"
                     />
                 </div>
+
+
 
             </main>
 
@@ -103,13 +105,8 @@ const beneficios = () => {
             </footer>
         </div>
 
-
-
-
-
-
     );
 
 };
 
-export default beneficios;
+export default academico;
