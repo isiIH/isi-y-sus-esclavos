@@ -2,13 +2,15 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { Chrono } from "react-chrono";
-/*import dynamic from "next/dynamic";
-const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });*/
-import dataAcademico from "../public/data/dataAcademico.js";
+import dynamic from "next/dynamic";
+const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
+import data from "../public/data/dataAcademico.js";
+import data2 from "../public/data/data2Academico.js";
 
 const academico = () => {
 
-
+    let nombres = [];
+    let datos = data;
 
     return (
         <div className="container">
@@ -58,11 +60,20 @@ const academico = () => {
 
                 </nav>
 
-                <h2>ACADEMICO</h2>
+                <h2>ACADÉMICO</h2>
+
+                <div className="container">
+
+                    <main>
+                        <div className="time-line-container">
+                            <TimeLine data={datos} />
+                        </div>
+                    </main>
+                </div>
 
                 <div style={{ width: "900px", height: "700px" }}>
                     <Chrono
-                        items={dataAcademico}
+                        items={data2}
                         enableOutline
                         //slideShow
                         useReadMore={false}
@@ -93,11 +104,6 @@ const academico = () => {
                 </Link>
             </footer>
         </div>
-
-
-
-
-
 
     );
 
