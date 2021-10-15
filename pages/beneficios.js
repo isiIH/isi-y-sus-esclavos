@@ -6,7 +6,6 @@ import dynamic from "next/dynamic";
 const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
 import data2 from "../public/data/data2Beneficios.js";
 import data from "../public/data/dataBeneficios.js";
-import data2 from "../public/data/data2Beneficios.js";
 
 const beneficios = () => {
 
