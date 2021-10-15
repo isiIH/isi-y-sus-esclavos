@@ -3,33 +3,34 @@ import items from "../data/calendario.json"
 var data = [];
 
 for (var i = 0; i < items.eventos.length; i++) {
-    var dia_inicio = items.eventos[i].fechaInicio[0] + items.eventos[i].fechaInicio[1];
-    var mes_inicio = items.eventos[i].fechaInicio[3] + items.eventos[i].fechaInicio[4];
-    var dia_fin = items.eventos[i].fechaTermino[0] + items.eventos[i].fechaInicio[1];
-    var mes_fin = items.eventos[i].fechaTermino[3] + items.eventos[i].fechaInicio[4];
+    var diai = items.eventos[i].fechaInicio[0] + items.eventos[i].fechaInicio[1];
+    var mesi = items.eventos[i].fechaInicio[3] + items.eventos[i].fechaInicio[4];
+    var diaf = items.eventos[i].fechaTermino[0] + items.eventos[i].fechaTermino[1];
+    var mesf = items.eventos[i].fechaTermino[3] + items.eventos[i].fechaTermino[4];
+    var fecha;
 
-
-    if (items.eventos[i].fechaTermino == "") {
-        dia_fin = parseInt(dia_inicio) + 1;
-        mes_fin = mes_inicio;
+    if (items.eventos[i].fechaInicio == "?") {
+        fecha = items.eventos[i].fechaTermino;
+    } else {
+        if (items.eventos[i].fechaInicio != "") {
+            fecha = "Desde el " + diai + "/" + mesi;
+            if (items.eventos[i].fechaTermino != "") {
+                fecha += " hasta el " + diaf + "/" + mesf;
+            }
+        } else {
+            fecha = "Hasta el " + diaf + "/" + mesf;
+        }
     }
 
-
-    var color = "";
     if (items.eventos[i].tipo == "academico") {
-        color = "green";
-
         data.push(
             {
-                id: i,
-                name: items.eventos[i].titulo,
-                start: new Date(2021, mes_inicio - 1, dia_inicio),
-                end: new Date(2021, mes_fin - 1, dia_fin),
-                color: color
+                title: items.eventos[i].titulo,
+                cardTitle: fecha,
+                cardDetailedText: items.eventos[i].descripcion,
             }
         );
     }
-
 
 }
 
