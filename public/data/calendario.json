@@ -240,7 +240,7 @@
             "titulo" : "Suspensiones/apelaciones de becas",
             "semestre" : "1",
             "descripcion" : "Último día para entrega de documentos de respaldo de suspensiones y apelaciones de becas: Presidente de la República, Indígena y de Residencia Indígena, primer semestre del año 2021 ",
-            "fechaInicio" : "",
+            "fechaInicio" : "?",
             "fechaTermino" : "Fecha sujeta a cambio por el MINEDUC",
             "tipo" : "beneficios"
         },
@@ -528,7 +528,7 @@
             "titulo" : "Proyectos FDI de Iniciativas Estudiantiles MINEDUC",
             "semestre" : "2",
             "descripcion" : "Último día del periodo de postulaciones, retiro de formularios y bases, para proyectos FDI de Iniciativas Estudiantiles del MINEDUC (*).",
-            "fechaInicio" : "",
+            "fechaInicio" : "?",
             "fechaTermino" : "Fecha sujeta a cambio por JUNAEB",
             "tipo" : "beneficios"
         },
@@ -609,8 +609,8 @@
             "titulo" : "Postulación de becas 2022",
             "semestre" : "2",
             "descripcion" : "Período de postulación a Gratuidad, Becas de Arancel y Créditos, para estudiantes de cursos superiores en el sitio www.fuas.cl para año 2022",
-            "fechaInicio" : "Se completa el FUAS en el mes de octubre y parte de noviembre, fecha exacta es publicada por el MINEDUC en octubre de cada año.",
-            "fechaTermino" : "",
+            "fechaInicio" : "?",
+            "fechaTermino" : "Se completa el FUAS en el mes de octubre y parte de noviembre, fecha exacta es publicada por el MINEDUC en octubre de cada año.",
             "tipo" : "beneficios"
         },
 
@@ -627,8 +627,8 @@
             "titulo" : "Resultados/Renovación de becas",
             "semestre" : "2",
             "descripcion" : "Publicación de resultados, asignación inicial y renovación de Gratuidad, Becas y FSCU, para postulantes FUAS.",
-            "fechaInicio" : "Publicación de resultados de beneficios sujeta a cambio Mineduc.",
-            "fechaTermino" : "",
+            "fechaInicio" : "?",
+            "fechaTermino" : "Publicación de resultados de beneficios sujeta a cambio Mineduc.",
             "tipo" : "beneficios"
         },
 
