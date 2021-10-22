@@ -38,17 +38,17 @@ const Index = () => {
                         <li><Link href="/academico" ><a>Academico</a></Link></li>
 
                         <li><Link href={{
-                            pathname: "/response",
+                            pathname: "/funcionarios",
                             query: { opt: 0 },
                         }}><a href="#">Funcionarios</a></Link></li>
 
                         <li><Link href={{
-                            pathname: "/response",
+                            pathname: "/cultural",
                             query: { opt: 0 },
                         }}><a href="#"> Cultural</a></Link></li>
 
                         <li><Link href={{
-                            pathname: "/response",
+                            pathname: "/otros",
                             query: { opt: 0 },
                         }}><a href="#">Otros</a></Link></li>
                     </ul>
