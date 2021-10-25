@@ -18,8 +18,7 @@ const beneficios = () => {
                 <title>Calendario Académico</title>
                 <link rel="icon" href="/uach.png" />
 
-                <script src="https://kit.fontawesome.com/c1eae85dfa.js" crossorigin="anonymous"></script>
-                <script src="app.js" defer></script>
+                <script type="text/javascript" src="../public/data/data.js"></script>
             </Head>
 
             <main>
@@ -32,21 +31,18 @@ const beneficios = () => {
                 <nav class="menu">
                     <label class="logo">Calendario UACh</label>
                     <ul class="menu-items">
-                        <li><Link href="/" ><a>Inicio</a></Link></li>
+                        <li><Link href="/" ><a>Todo</a></Link></li>
 
                         <li><Link href="/beneficios" ><a>Beneficios</a></Link></li>
 
                         <li><Link href="/academico" ><a>Academico</a></Link></li>
 
-                        <li><Link href={{
-                            pathname: "/response",
-                            query: { opt: 0 },
-                        }}><a href="#">Funcionarios</a></Link></li>
+                        <li><a href="#" id="funcionarios">Funcionarios</a></li>
 
                         <li><Link href={{
                             pathname: "/response",
                             query: { opt: 0 },
-                        }}><a href="#"> Cultural</a></Link></li>
+                        }}><a href="#">Cultural</a></Link></li>
 
                         <li><Link href={{
                             pathname: "/response",

@@ -1,8 +1,9 @@
-import items from "../data/calendario.json"
+import items from "../data/calendario.json";
 
 var data = [];
 
 for(var i=0; i<items.eventos.length; i++){
+    //if(filtro=="todos" || filtro == items.eventos[i].tipo){
     var diai = items.eventos[i].fechaInicio[0] + items.eventos[i].fechaInicio[1];
     var mesi = items.eventos[i].fechaInicio[3] + items.eventos[i].fechaInicio[4];
     var diaf = items.eventos[i].fechaTermino[0] + items.eventos[i].fechaTermino[1];
@@ -28,6 +29,7 @@ for(var i=0; i<items.eventos.length; i++){
             cardDetailedText: items.eventos[i].descripcion,
         }
     );
-}
+    }
+//}
 
 export default data;
