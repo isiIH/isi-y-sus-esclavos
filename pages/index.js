@@ -1,106 +1,51 @@
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
-import {Chrono} from "react-chrono";
-import data2 from "../public/data/data.js";
-import dynamic from "next/dynamic";
-const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
-import data from "../public/data/data2.js";
-
 const Index = () => {
-
-    let nombres = [];
-    let datos = data;
-
     return (
         <div className="container">
-            <Head>
-                <title>Calendario Académico</title>
-                <link rel="icon" href="/uach.png" />
+        <Head>
+            <title>INFO104 Nextjs App</title>
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-                <script src="app.js" defer></script>
-            </Head>
+        <main>
 
-            <main>
+            <h1 className="title">Calendario UACH 2021</h1>
 
+            <p className="description">
+                Seleccione orientación del calendario.
+            </p>
 
-
-                <h1 className="title">Calendario Académico UACH 2021</h1>
-
-
-                <nav className="menu">
-                    <label className="logo">Calendario UACh</label>
-                    <ul className="menu-items">
-                        <li><Link href="/" ><a>Inicio</a></Link></li>
-
-                        <li><Link href="/beneficios"><a>Beneficios</a></Link></li>
-
-                        <li><Link href="/academico" ><a>Academico</a></Link></li>
-
-                        <li><Link href={{
-                            pathname: "/funcionarios",
-                            query: { opt: 0 },
-                        }}><a href="#">Funcionarios</a></Link></li>
-
-                        <li><Link href={{
-                            pathname: "/cultural",
-                            query: { opt: 0 },
-                        }}><a href="#"> Cultural</a></Link></li>
-
-                        <li><Link href={{
-                            pathname: "/otros",
-                            query: { opt: 0 },
-                        }}><a href="#">Otros</a></Link></li>
-                    </ul>
-                    <span class="btn-menu">
-                        <i class="fa fa-bars"></i>
-                    </span>
-
-
-                </nav>
-
-
-
-                <div className="container">
-
-                    <main>
-                        <div className="time-line-container">
-                            <TimeLine data={datos} />
-                        </div>
-                    </main>
-                </div>
-
-                <div style={{ width: "900px", height: "700px" }}>
-                    <Chrono 
-                        items={data2} 
-                        enableOutline
-                        //slideShow
-                        useReadMore={false}
-                        cardHeight="100px"
-                        theme={{ 
-                            primary: "black",
-                            secondary: "orange",
-                            cardBgColor: "#8fbbaf",
-                            cardForeColor: "black",
-                            titleColor: "black"
-                        }}
-                        mode="VERTICAL_ALTERNATING"
-                    />
-                </div>
-
-            </main>
-
-
-            <footer>
-                <a className="xd" href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
-                    La isi hizo esto.
-                </a>
-                &nbsp;-&nbsp;
-                <Link href="/about">
-                    <a className="xd">Derechos Reservados 2021.</a>
+            <div className="grid">
+                <Link
+                    href={{
+                        pathname: "/inicioVertical",
+                        query: { opt: 0 },
+                    }}
+                >
+                    <a className="card">Vertical</a>
                 </Link>
-            </footer>
-        </div>
+                <Link
+                    href={{
+                        pathname: "/inicioHorizontal",
+                        query: { opt: 1 },
+                    }}
+                >
+                    <a className="card">Horizontal</a>
+                </Link>
+            </div>
+        </main>
+
+        <footer>
+            <a href="https://github.com/PabloSzx/INFO104-2021-1" target="_blank">
+                Repositorio y tutorial
+            </a>
+            &nbsp;-&nbsp;
+            <Link href="/about">
+                <a>Sobre esta página</a>
+            </Link>
+        </footer>
+    </div>
     );
 };
 

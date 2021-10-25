@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { Chrono } from "react-chrono";
+import {Chrono} from "react-chrono";
 import dynamic from "next/dynamic";
 const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
-import data from "../public/data/dataAcademico.js";
-import data2 from "../public/data/data2Academico.js";
+import data2 from "../public/data/data2Beneficios.js";
+import data from "../public/data/dataBeneficios.js";
 
-const academico = () => {
+const horizBeneficios = () => {
 
     let nombres = [];
     let datos = data;
@@ -33,15 +33,16 @@ const academico = () => {
                     <label class="logo">Calendario UACh</label>
                     <ul class="menu-items">
                         <li><Link href="/" ><a>Inicio</a></Link></li>
-                        <li><Link href="/beneficios" ><a>Beneficios</a></Link></li>
 
-                        <li><Link href="/academico" ><a>Academico</a></Link></li>
+                        <li><Link href="/horizBeneficios"><a>Beneficios</a></Link></li>
 
-                        <li><Link href="/funcionarios" ><a>Funcionarios</a></Link></li>
+                        <li><Link href="/horizAcademico" ><a>Academico</a></Link></li>
 
-                        <li><Link href="/cultural" ><a>Cultural</a></Link></li>
+                        <li><Link href="/horizFuncionarios" ><a>Funcionarios</a></Link></li>
 
-                        <li><Link href="/otros" ><a>Otros</a></Link></li>
+                        <li><Link href="/horizCultural" ><a>cultural</a></Link></li>
+
+                        <li><Link href="/horizOtros" ><a>Otros</a></Link></li>
                     </ul>
                     <span class="btn-menu">
                         <i class="fa fa-bars"></i>
@@ -50,28 +51,19 @@ const academico = () => {
 
                 </nav>
 
-                <h2>ACADÉMICO</h2>
+                <h2>BENEFICIOS</h2> 
 
-                <div style={{ width: "900px", height: "700px" }}>
-                    <Chrono
-                        items={data2}
-                        enableOutline
-                        //slideShow
-                        useReadMore={false}
-                        cardHeight="100px"
-                        theme={{
-                            primary: "black",
-                            secondary: "orange",
-                            cardBgColor: "#8fbbaf",
-                            cardForeColor: "black",
-                            titleColor: "black"
-                        }}
-                        mode="VERTICAL_ALTERNATING"
-                    />
+                <div className="container">
+
+
+                    <div className="time-line-container">
+                        <TimeLine data={datos} 
+                        />
+                    </div>
+
                 </div>
 
-
-
+                
             </main>
 
 
@@ -90,4 +82,4 @@ const academico = () => {
 
 };
 
-export default academico;
+export default horizBeneficios;

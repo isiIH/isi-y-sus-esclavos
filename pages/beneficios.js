@@ -38,20 +38,12 @@ const beneficios = () => {
 
                         <li><Link href="/academico" ><a>Academico</a></Link></li>
 
-                        <li><Link href={{
-                            pathname: "/response",
-                            query: { opt: 0 },
-                        }}><a href="#">Funcionarios</a></Link></li>
+                        <li><Link href="/funcionarios" ><a>Funcionarios</a></Link></li>
 
-                        <li><Link href={{
-                            pathname: "/response",
-                            query: { opt: 0 },
-                        }}><a href="#"> Cultural</a></Link></li>
+                        <li><Link href="/cultural" ><a>Cultural</a></Link></li>
 
-                        <li><Link href={{
-                            pathname: "/response",
-                            query: { opt: 0 },
-                        }}><a href="#">Otros</a></Link></li>
+                        <li><Link href="/otros" ><a>Otros</a></Link></li>
+
                     </ul>
                     <span class="btn-menu">
                         <i class="fa fa-bars"></i>
@@ -61,16 +53,7 @@ const beneficios = () => {
                 </nav>
 
                 <h2>BENEFICIOS</h2> 
-
-                <div className="container">
-
-
-                    <div className="time-line-container">
-                        <TimeLine data={datos} />
-                    </div>
-
-                </div>
-
+                
                 <div style={{ width: "900px", height: "700px" }}>
                     <Chrono 
                         items={data2} 

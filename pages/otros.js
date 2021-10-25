@@ -4,7 +4,7 @@ import React from "react";
 import { Chrono } from "react-chrono";
 import data from "../public/data/dataOtros.js";
 
-const Index = () => {
+const otros = () => {
     return (
     <div className="container">
     <Head>
@@ -57,7 +57,7 @@ const Index = () => {
         
         </nav>
         
-         
+        
         
             <div className="uwu" style={{ width: "100%", height: "39.375rem" }}>
                 <Chrono
@@ -96,4 +96,4 @@ const Index = () => {
 );
 };
 
-export default Index;
+export default otros;

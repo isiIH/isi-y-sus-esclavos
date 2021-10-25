@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { Chrono } from "react-chrono";
+import {Chrono} from "react-chrono";
+import data2 from "../public/data/data.js";
 import dynamic from "next/dynamic";
 const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
-import data from "../public/data/dataAcademico.js";
-import data2 from "../public/data/data2Academico.js";
+import data from "../public/data/data2.js";
 
-const academico = () => {
+const inicioVertical = () => {
 
     let nombres = [];
     let datos = data;
@@ -18,7 +18,6 @@ const academico = () => {
                 <title>Calendario Académico</title>
                 <link rel="icon" href="/uach.png" />
 
-                <script src="https://kit.fontawesome.com/c1eae85dfa.js" crossorigin="anonymous"></script>
                 <script src="app.js" defer></script>
             </Head>
 
@@ -29,11 +28,12 @@ const academico = () => {
                 <h1 className="title">Calendario Académico UACH 2021</h1>
 
 
-                <nav class="menu">
-                    <label class="logo">Calendario UACh</label>
-                    <ul class="menu-items">
+                <nav className="menu">
+                    <label className="logo">Calendario UACh</label>
+                    <ul className="menu-items">
                         <li><Link href="/" ><a>Inicio</a></Link></li>
-                        <li><Link href="/beneficios" ><a>Beneficios</a></Link></li>
+
+                        <li><Link href="/beneficios"><a>Beneficios</a></Link></li>
 
                         <li><Link href="/academico" ><a>Academico</a></Link></li>
 
@@ -50,16 +50,16 @@ const academico = () => {
 
                 </nav>
 
-                <h2>ACADÉMICO</h2>
+
 
                 <div style={{ width: "900px", height: "700px" }}>
-                    <Chrono
-                        items={data2}
+                    <Chrono 
+                        items={data2} 
                         enableOutline
                         //slideShow
                         useReadMore={false}
                         cardHeight="100px"
-                        theme={{
+                        theme={{ 
                             primary: "black",
                             secondary: "orange",
                             cardBgColor: "#8fbbaf",
@@ -69,8 +69,6 @@ const academico = () => {
                         mode="VERTICAL_ALTERNATING"
                     />
                 </div>
-
-
 
             </main>
 
@@ -85,9 +83,7 @@ const academico = () => {
                 </Link>
             </footer>
         </div>
-
     );
-
 };
 
-export default academico;
+export default inicioVertical;
