@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export async function getServerSideProps(context) {
   const res = await fetch("http://localhost:3000/data/todo.json");
   const data = await res.json();
-
+  console.log(data);
   if (!data) {
     return {
       notFound: true,
