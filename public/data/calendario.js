@@ -24,6 +24,9 @@ export function Calendario(f) {
 }
 
 export function Prueba(filtro) {
+    if(filtro == undefined){
+        filtro = "todos";
+    }
     var data = [];
     console.log("filtro de la función = "+filtro);
     var c = 0;

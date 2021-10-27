@@ -161,7 +161,7 @@
             "descripcion" : "Promoción e inscripción a talleres extracurriculares de la Dirección de Asuntos Estudiantiles.",
             "fechaInicio" : "05-04-2021",
             "fechaTermino" : "19-04-2021",
-            "tipo" : "academica"
+            "tipo" : "academico"
         },
 
         {
@@ -170,7 +170,7 @@
             "descripcion" : "Inicio de talleres Extracurriculares de la Dirección de Asuntos Estudiantiles",
             "fechaInicio" : "12-04-2021",
             "fechaTermino" : "",
-            "tipo" : "academica"
+            "tipo" : "academico"
         },
 
         {
