@@ -1,24 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
 import React, { useState,useEffect } from "react";
-//import dynamic from "next/dynamic";
-//const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
-//import data from "../public/data/data2.js";
 import { useRouter } from "next/router";
-import { Calendario, Prueba } from "../public/data/calendario";
+import { CalendV, CalendH } from "../public/data/calendario";
 
 const Index = () => {
     const router = useRouter();
 
-    const [data, setData]=useState();
-
+    const [calendV, setCalendV]=useState();
+    const [calendH, setCalendH]=useState();
+    
     useEffect(() => {
-        setData(Calendario(router.query.filtro))
-        console.log(router.query.filtro)
+        if(router.query.filtro != undefined){
+            setCalendV(CalendV(router.query.filtro));
+            setCalendH(CalendH(router.query.filtro));
+        }
     },[router.query.filtro]);
-
-    //let nombres = [];
-    //let datos = data;
 
     return (
         <div className="container">
@@ -57,17 +54,11 @@ const Index = () => {
 
                     </ul>
                 </nav>
-
-                {/*<div className="container">
-
-                    <main>
-                        <div className="time-line-container">
-                            <TimeLine data={datos} />
-                        </div>
-                    </main>
-                </div>*/}
                 
-                {data}
+                {calendV}
+
+                {calendH}
+
             </main>
 
 

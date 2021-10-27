@@ -1,6 +1,28 @@
 {
     "titulo"   : "Calendario Académico de Pregrado Uach.",
     "anho"    : "2021",
+    "leyenda" : [
+        {
+            "tipo" : "academico",
+            "color" : "red"
+        },
+        {
+            "tipo" : "beneficios",
+            "color" : "green"
+        },
+        {
+            "tipo" : "funcionarios",
+            "color" : "blue"
+        },
+        {
+            "tipo" : "cultural",
+            "color" : "yellow"
+        },
+        {
+            "tipo" : "otros",
+            "color" : "orange"
+        }
+    ],
     "eventos" : [
         {
             "titulo" : "Primer período de matrícula",
