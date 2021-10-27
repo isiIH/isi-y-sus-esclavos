@@ -3,23 +3,23 @@
     "anho"    : "2021",
     "leyenda" : [
         {
-            "tipo" : "academico",
+            "tipo" : "Académico",
             "color" : "red"
         },
         {
-            "tipo" : "beneficios",
+            "tipo" : "Beneficios",
             "color" : "green"
         },
         {
-            "tipo" : "funcionarios",
+            "tipo" : "Funcionarios",
             "color" : "blue"
         },
         {
-            "tipo" : "cultural",
+            "tipo" : "Cultural",
             "color" : "yellow"
         },
         {
-            "tipo" : "otros",
+            "tipo" : "Otros",
             "color" : "orange"
         }
     ],
