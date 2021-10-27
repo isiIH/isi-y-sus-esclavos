@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+
 const Index = () => {
     return (
         <div className="container">
@@ -17,20 +18,10 @@ const Index = () => {
             </p>
 
             <div className="grid">
-                <Link
-                    href={{
-                        pathname: "/inicioVertical",
-                        query: { opt: 0 },
-                    }}
-                >
+                <Link href="/inicioVertical?filtro=todos">
                     <a className="card">Vertical</a>
                 </Link>
-                <Link
-                    href={{
-                        pathname: "/inicioHorizontal",
-                        query: { opt: 1 },
-                    }}
-                >
+                <Link href="/inicioHorizontal?filtro=todos">
                     <a className="card">Horizontal</a>
                 </Link>
             </div>

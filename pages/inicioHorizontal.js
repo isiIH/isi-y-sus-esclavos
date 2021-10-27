@@ -1,14 +1,19 @@
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
-import dynamic from "next/dynamic";
-const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
-import data from "../public/data/data2.js";
+import React, { useState,useEffect } from "react";
+import { useRouter } from "next/router";
+import { CalendH } from "../public/data/calendario";
 
 const inicioHorizontal = () => {
+    const router = useRouter();
 
-    let nombres = [];
-    let datos = data;
+    const [calendH, setCalendH]=useState();
+    
+    useEffect(() => {
+        if(router.query.filtro != undefined){
+            setCalendH(CalendH(router.query.filtro));
+        }
+    },[router.query.filtro]);
 
     return (
         <div className="container">
@@ -20,39 +25,40 @@ const inicioHorizontal = () => {
             <main>
 
 
-
                 <h1 className="title">Calendario Académico UACH 2021</h1>
 
 
                 <nav className="menu">
                     <label className="logo">Calendario UACh</label>
                     <ul className="menu-items">
-                        <li><Link href="/" ><a>Inicio</a></Link></li>
+                        <li><a href="/inicioHorizontal?filtro=todos">Todo</a></li>
 
-                        <li><Link href="/horizBeneficios"><a>Beneficios</a></Link></li>
+                        <li><a>Semestre</a>
+                            <ul>
+                                <li><a href="/inicioHorizontal?filtro=1">Semestre 1</a></li>
+                                <li><a href="/inicioHorizontal?filtro=2">Semestre 2</a></li>
+                            </ul>
+                        </li>
 
-                        <li><Link href="/horizAcademico" ><a>Academico</a></Link></li>
+                        <li><a href="/inicioHorizontal?filtro=beneficios">Beneficios</a></li>
 
-                        <li><Link href="/horizFuncionarios" ><a>Funcionarios</a></Link></li>
+                        <li><a href="/inicioHorizontal?filtro=academico">Académico</a></li>
 
-                        <li><Link href="/horizCultural" ><a>cultural</a></Link></li>
+                        <li><a href="/inicioHorizontal?filtro=funcionarios">Funcionarios</a></li>
 
-                        <li><Link href="/horizOtros" ><a>Otros</a></Link></li>
+                        <li><a href="/inicioHorizontal?filtro=cultural">Cultural</a></li>
+
+                        <li><a href="/inicioHorizontal?filtro=otros">Otros</a></li>
+
                     </ul>
 
                 </nav>
                 
+                <button><Link href="/" ><a>Volver</a></Link></button>
 
-                <div className="container">
+                {calendH}
 
-                    <main>
-                        <div className="time-line-container">
-                            <TimeLine data={datos} />
-                        </div>
-                    </main>
-                </div>
-
-
+    
             </main>
 
 

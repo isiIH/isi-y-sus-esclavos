@@ -1,28 +1,28 @@
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
-import {Chrono} from "react-chrono";
-import data2 from "../public/data/data.js";
-import dynamic from "next/dynamic";
-const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
-import data from "../public/data/data2.js";
+import React, { useState,useEffect } from "react";
+import { useRouter } from "next/router";
+import { CalendV } from "../public/data/calendario";
 
 const inicioVertical = () => {
+    const router = useRouter();
 
-    let nombres = [];
-    let datos = data;
+    const [calendV, setCalendV]=useState();
+    
+    useEffect(() => {
+        if(router.query.filtro != undefined){
+            setCalendV(CalendV(router.query.filtro));
+        }
+    },[router.query.filtro]);
 
     return (
         <div className="container">
             <Head>
                 <title>Calendario Académico</title>
                 <link rel="icon" href="/uach.png" />
-
-                <script src="app.js" defer></script>
             </Head>
 
             <main>
-
 
 
                 <h1 className="title">Calendario Académico UACH 2021</h1>
@@ -31,44 +31,34 @@ const inicioVertical = () => {
                 <nav className="menu">
                     <label className="logo">Calendario UACh</label>
                     <ul className="menu-items">
-                        <li><Link href="/" ><a>Inicio</a></Link></li>
+                        <li><a href="/inicioVertical?filtro=todos">Todo</a></li>
 
-                        <li><Link href="/beneficios"><a>Beneficios</a></Link></li>
+                        <li><a>Semestre</a>
+                            <ul>
+                                <li><a href="/inicioVertical?filtro=1">Semestre 1</a></li>
+                                <li><a href="/inicioVertical?filtro=2">Semestre 2</a></li>
+                            </ul>
+                        </li>
 
-                        <li><Link href="/academico" ><a>Academico</a></Link></li>
+                        <li><a href="/inicioVertical?filtro=beneficios">Beneficios</a></li>
 
-                        <li><Link href="/funcionarios" ><a>Funcionarios</a></Link></li>
+                        <li><a href="/inicioVertical?filtro=academico">Académico</a></li>
 
-                        <li><Link href="/cultural" ><a>Cultural</a></Link></li>
+                        <li><a href="/inicioVertical?filtro=funcionarios">Funcionarios</a></li>
 
-                        <li><Link href="/otros" ><a>Otros</a></Link></li>
+                        <li><a href="/inicioVertical?filtro=cultural">Cultural</a></li>
+
+                        <li><a href="/inicioVertical?filtro=otros">Otros</a></li>
+
                     </ul>
-                    <span class="btn-menu">
-                        <i class="fa fa-bars"></i>
-                    </span>
 
 
                 </nav>
 
+                <button><Link href="/" ><a>Volver</a></Link></button>
 
+                {calendV}
 
-                <div style={{ width: "900px", height: "700px" }}>
-                    <Chrono 
-                        items={data2} 
-                        enableOutline
-                        //slideShow
-                        useReadMore={false}
-                        cardHeight="100px"
-                        theme={{ 
-                            primary: "black",
-                            secondary: "orange",
-                            cardBgColor: "#8fbbaf",
-                            cardForeColor: "black",
-                            titleColor: "black"
-                        }}
-                        mode="VERTICAL_ALTERNATING"
-                    />
-                </div>
 
             </main>
 
