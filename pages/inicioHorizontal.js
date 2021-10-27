@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import {Chrono} from "react-chrono";
-import data2 from "../public/data/data.js";
 import dynamic from "next/dynamic";
 const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
 import data from "../public/data/data2.js";
@@ -17,8 +15,6 @@ const inicioHorizontal = () => {
             <Head>
                 <title>Calendario Académico</title>
                 <link rel="icon" href="/uach.png" />
-
-                <script src="app.js" defer></script>
             </Head>
 
             <main>
@@ -43,14 +39,9 @@ const inicioHorizontal = () => {
 
                         <li><Link href="/horizOtros" ><a>Otros</a></Link></li>
                     </ul>
-                    <span class="btn-menu">
-                        <i class="fa fa-bars"></i>
-                    </span>
-
 
                 </nav>
-
-
+                
 
                 <div className="container">
 

@@ -4,7 +4,7 @@ const Index = () => {
     return (
         <div className="container">
         <Head>
-            <title>INFO104 Nextjs App</title>
+            <title>Calendario Académico</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
@@ -37,8 +37,8 @@ const Index = () => {
         </main>
 
         <footer>
-            <a href="https://github.com/PabloSzx/INFO104-2021-1" target="_blank">
-                Repositorio y tutorial
+            <a href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
+                Repositorio
             </a>
             &nbsp;-&nbsp;
             <Link href="/about">
