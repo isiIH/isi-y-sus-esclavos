@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Index = () => {
     return (
-        <div className="container">
+        <div className="contenedor-principal">
         <Head>
             <title>Calendario Académico</title>
             <link rel="icon" href="/favicon.ico" />
@@ -11,18 +11,31 @@ const Index = () => {
 
         <main>
 
-            <h1 className="title">Calendario UACH 2021</h1>
+            <h1 className="titulo">Calendario UACH 2021</h1>
 
-            <p className="description">
+            <p className="descripcion">
                 Seleccione orientación del calendario.
             </p>
 
-            <div className="grid">
-                <Link href="/inicioVertical?filtro=todos">
-                    <a className="card">Vertical</a>
-                </Link>
+            <div className="contenedor-imagenes">
+                
+                
                 <Link href="/inicioHorizontal?filtro=todos">
-                    <a className="card">Horizontal</a>
+                    <div className="img-1">
+                        <p className="texto-descripcion-img">Este calendario es recomendado para PC.</p>
+                        <img className="img-calendario-horizontal" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/2048px-LEGO_logo.svg.png">
+                            
+                        </img>
+                    </div>
+                </Link>
+                    
+                <Link href="/inicioVertical?filtro=todos">
+                    <div className="img-1">
+                        <p className="texto-descripcion-img">Este calendario es recomendado para dispositivos móviles.</p>
+                        <img className="img-calendario-vertical" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/2048px-LEGO_logo.svg.png">
+                            
+                        </img>
+                    </div>
                 </Link>
             </div>
         </main>

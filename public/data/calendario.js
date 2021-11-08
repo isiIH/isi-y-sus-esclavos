@@ -30,12 +30,8 @@ export function CalendV(f) {
 export function CalendH(f) {
     return(
         <>
-        <div className="container" style={{ width: "900px", height: "700px" }}>
-            <main>
-                <div className="time-line-container">
-                    <TimeLine data={dataH(f)} />
-                </div>
-            </main>
+        <div className="time-line-container">
+            <TimeLine data={dataH(f)} />
         </div>
         </>
     );
@@ -43,7 +39,6 @@ export function CalendH(f) {
 
 export function dataV(filtro) {
     var data = [];
-
     for(var i=0; i<items.eventos.length; i++){
         if(filtro == "todos" || filtro == items.eventos[i].tipo || filtro == items.eventos[i].semestre){
             var diai = items.eventos[i].fechaInicio[0] + items.eventos[i].fechaInicio[1];
@@ -83,45 +78,37 @@ function dataH(filtro) {
 
     for (var i = 0; i < items.eventos.length; i++) {
         if(filtro == "todos" || filtro == items.eventos[i].tipo || filtro == items.eventos[i].semestre){
-            var dia_inicio = items.eventos[i].fechaInicio[0] + items.eventos[i].fechaInicio[1];
-            var mes_inicio = items.eventos[i].fechaInicio[3] + items.eventos[i].fechaInicio[4];
-            var dia_fin = items.eventos[i].fechaTermino[0] + items.eventos[i].fechaInicio[1];
-            var mes_fin = items.eventos[i].fechaTermino[3] + items.eventos[i].fechaInicio[4];
-
-            if (items.eventos[i].fechaTermino == "") {
+            if(items.eventos[i].fechaInicio != "?"){
+                var dia_inicio = items.eventos[i].fechaInicio[0] + items.eventos[i].fechaInicio[1];
+                var mes_inicio = items.eventos[i].fechaInicio[3] + items.eventos[i].fechaInicio[4];
+                var dia_fin = items.eventos[i].fechaTermino[0] + items.eventos[i].fechaTermino[1];
+                var mes_fin = items.eventos[i].fechaTermino[3] + items.eventos[i].fechaTermino[4];
+                var año_inicio = items.eventos[i].fechaInicio.substring(6,10);
+                var año_fin = items.eventos[i].fechaTermino.substring(6,10);
+            }
+            
+            if (items.eventos[i].fechaTermino == "" || items.eventos[i].fechaInicio == "?") {
                 dia_fin = (parseInt(dia_inicio) + 1).toString();
                 mes_fin = mes_inicio;
-            } else{
-                if (items.eventos[i].fechaInicio == "") {
-                    dia_inicio = (parseInt(dia_fin) - 1).toString();
-                    mes_inicio = mes_fin;
-                }
+                año_fin = año_inicio;
+            } else if (items.eventos[i].fechaInicio == "") {
+                dia_inicio = (parseInt(dia_fin) - 1).toString();
+                mes_inicio = mes_fin;
+                año_inicio = año_fin;
             }
-
-            var color = "";
-            if (items.eventos[i].tipo == "academico") {
-                color = "red";
-            }
-            if (items.eventos[i].tipo == "beneficios") {
-                color = "green";
-            }
-            if (items.eventos[i].tipo == "funcionarios") {
-                color = "blue";
-            }
-            if (items.eventos[i].tipo == "cultural") {
-                color = "yellow";
-            }
-            if (items.eventos[i].tipo == "otros") {
-                color = "orange";
+            
+            var j = 0;
+            while(items.eventos[i].tipo != items.leyenda[j].tipo){
+                j++;
             }
 
             data.push(
                 {
                     id: i,
                     name: items.eventos[i].titulo,
-                    start: new Date(2021, mes_inicio - 1, dia_inicio),
-                    end: new Date(2021, mes_fin - 1, dia_fin),
-                    color: color
+                    start: new Date(año_inicio, mes_inicio - 1, dia_inicio),
+                    end: new Date(año_fin, mes_fin - 1, dia_fin),
+                    color: items.leyenda[j].color
                 }
             );
         }

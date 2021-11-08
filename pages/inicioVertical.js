@@ -24,10 +24,6 @@ const inicioVertical = () => {
 
             <main>
 
-
-                <h1 className="title">Calendario Académico UACH 2021</h1>
-
-
                 <nav className="menu">
                     <label className="logo">Calendario UACh</label>
                     <ul className="menu-items">
@@ -55,7 +51,11 @@ const inicioVertical = () => {
 
                 </nav>
 
-                <button><Link href="/" ><a>Volver</a></Link></button>
+                <div className="links-items">
+                    <Link href="/"><a>Página Principal</a></Link>
+                    <p>&nbsp; &gt; Calendario Horizontal | &nbsp;</p>
+                    <Link href="/inicioHorizontal?filtro=todos"><a>Ir a calendario horizontal</a></Link>
+                </div>
 
                 {calendV}
 

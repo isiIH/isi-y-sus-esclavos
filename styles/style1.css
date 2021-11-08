@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d6f8b8;
+}
+
+main {
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+.menu a {
+  margin: 10px 20px 10px 20px;
+  border-bottom: 3px solid #e0e0e0;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.currentPage {
+  border-bottom: 3px solid #0070f3 !important;
+  color: #333333;
+}
+
+.counter {
+  font-size: 0.7em;
+  padding-left: 25px;
+  border: 0px !important;
+}
+.counter button {
+  padding: 1px 10px;
+  margin: 0;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.todo-item {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.todo-item-title {
+  flex: 10;
+}
+.todo-item-done {
+  flex: 1;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  color: #6b7b8e;
+}
+
+.time-line-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 1280px;
+  height: 500px;
+  margin: 10px;
+}
+
+.description {
+  text-align: center;
+  color: #6b7b8e;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.card {
+  margin: none;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #6b7b8e;
+  background-color: #acdeaa;
+  text-decoration: none;
+  border: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  background-color: #9fcc9e;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.App h1 {
+  text-align: center;
+}
+
+.logo {
+  height: 1em;
+}
+
+.calendario {
+  width: 85rem;
+  height: 30rem;
+  background: lightseagreen;
+
+  animation-name: ejemplo;
+  animation-duration: 4s;
+  background-position: right;
+  margin-top: 7rem;
+  margin-left: 45rem;
+  margin-right: 25rem;
+}
+.textoCalendario {
+  color: transparent;
+}
+.calendario:hover {
+  text-align: center;
+  background: lightgreen;
+  font-size: large;
+  font-size: 10rem;
+}
+.textoCalendario:hover {
+  color: lightseagreen;
+}
+
+.listaIzq {
+  position: absolute;
+  margin-right: 100rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+@keyframes ejemplo {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: lightseagreen;
+  }
+}
+.botonbacan {
+  width: 100px;
+  height: 100px;
+  background-color: lightseagreen;
+  animation-name: ejemplo;
+  animation-duration: 4s;
+}
+.xd {
+  font-size: 1rem;
+}
+
+.links-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: left !important;
+  align-items: left !important;
+}
+
+.links-items>p {
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 3px;
+}
+
+.menu {
+  background-color: #8fbbaf;
+  height: 75px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1rem;
+}
+.logo {
+  color: #fff;
+  font-size: 30px;
+  padding: 0 80px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+.menu-items{
+  display: flex;
+  list-style: none;
+  margin-right: 30px;
+}
+
+.menu-items li>a{
+  padding: 7px 13px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  text-transform: uppercase;
+  color:#fff;
+}
+
+.menu-items li>a:hover{
+  background-color: rgba(0,0,0,.3);
+  transition: .4s;
+}
+
+.menu-items>li{
+  float: left;
+  text-align:center;
+  cursor: pointer;
+}
+
+.menu-items>li>ul{
+  display: none;
+  background-color: #8FBBAF;
+}
+
+.menu-items>li:hover>ul {
+  display:block;
+  position:absolute;
+  z-index:1;
+  padding:0;
+  border-bottom: 3px solid #e0e0e0;
+}
+
+.menu-items>li>ul>li>a {
+  border-bottom: none;
+}
+
+.btn-menu {
+  margin-right: 30px;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+ul.show {
+  top: 65px;
+}
+
+@media screen and(max-width: 952px) {
+  .logo {
+    font-size: 30px;
+    padding-left: 35px;
+  }
+
+  .menu-items li a {
+    font-size: 16px;
+  }
+}
+
+@media screen and(max-width: 858px) {
+  .menu {
+    height: 65px;
+  }
+  .btn-menu {
+    display: inline-flex;
+  }
+  .menu-items {
+    position: fixed;
+    width: 100vw;
+    height: calc(100%-65px);
+    background: #414141;
+    top: -100vh;
+    text-align: center;
+    transition: all 0.4s;
+    flex-direction: column;
+  }
+  .menu-items li {
+    margin: 30px 0 0 0;
+    line-height: 30px;
+  }
+  .menu-items li:hover {
+    background: none;
+  }
+  .menu-items li a {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .menu-items li a:hover {
+    color: #e9183b;
+  }
+  .logo {
+    font-size: 25px;
+    padding-left: 35px;
+  }
+  @media screen and(max-width: 858px) and (orientation: landscape) {
+    .menu-items li {
+      margin: 5px 0 0 0;
+    }
+    .menu-items {
+      overflow: scroll;
+      height: calc(100%-65px);
+    }
+  }
+}

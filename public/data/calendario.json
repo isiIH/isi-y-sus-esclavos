@@ -3,24 +3,24 @@
     "anho"    : "2021",
     "leyenda" : [
         {
-            "tipo" : "Académico",
-            "color" : "red"
+            "tipo" : "beneficios",
+            "color" : "#ff0000"
         },
         {
-            "tipo" : "Beneficios",
-            "color" : "green"
+            "tipo" : "academico",
+            "color" : "#00ff00"
         },
         {
-            "tipo" : "Funcionarios",
-            "color" : "blue"
+            "tipo" : "funcionarios",
+            "color" : "#0000ff"
         },
         {
-            "tipo" : "Cultural",
-            "color" : "yellow"
+            "tipo" : "cultural",
+            "color" : "#ffff00"
         },
         {
-            "tipo" : "Otros",
-            "color" : "orange"
+            "tipo" : "otros",
+            "color" : "#ff00ff"
         }
     ],
     "eventos" : [

@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState,useEffect } from "react";
 import { useRouter } from "next/router";
 import { CalendH } from "../public/data/calendario";
+import items from "../public/data/calendario.json";
 
 const inicioHorizontal = () => {
     const router = useRouter();
@@ -23,10 +24,6 @@ const inicioHorizontal = () => {
             </Head>
 
             <main>
-
-
-                <h1 className="title">Calendario Académico UACH 2021</h1>
-
 
                 <nav className="menu">
                     <label className="logo">Calendario UACh</label>
@@ -53,11 +50,21 @@ const inicioHorizontal = () => {
                     </ul>
 
                 </nav>
-                
-                <button><Link href="/" ><a>Volver</a></Link></button>
+
+                <div className="links-items">
+                    <Link href="/"><a>Página Principal</a></Link>
+                    <p>&nbsp; &gt; Calendario Horizontal | &nbsp;</p>
+                    <Link href="/inicioVertical?filtro=todos"><a>Ir a calendario vertical</a></Link>
+                </div>
 
                 {calendH}
-
+                <ul className="legend">
+                    <li><span className="beneficios" style={{ backgroundColor:items.leyenda[0].color }}></span>Beneficios</li>
+                    <li><span className="academicos" style={{ backgroundColor:items.leyenda[1].color }}></span>Académico</li>
+                    <li><span className="funcionarios" style={{ backgroundColor:items.leyenda[2].color }}></span>Funcionarios</li>
+                    <li><span className="cultural" style={{ backgroundColor:items.leyenda[3].color }}></span>Cultural</li>
+                    <li><span className="otros" style={{ backgroundColor:items.leyenda[4].color }}></span>Otros</li>
+                </ul>
     
             </main>
 
