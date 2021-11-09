@@ -6,7 +6,7 @@ const Index = () => {
         <div className="contenedor-principal">
         <Head>
             <title>Calendario Académico</title>
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/images/uach.png" />
         </Head>
 
         <main>
@@ -23,7 +23,7 @@ const Index = () => {
                 <Link href="/inicioHorizontal?filtro=todos">
                     <div className="img-1">
                         <p className="texto-descripcion-img">Este calendario es recomendado para PC.</p>
-                        <img className="img-calendario-horizontal" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/2048px-LEGO_logo.svg.png">
+                        <img className="img-calendario-horizontal" src="/images/calendH.png">
                             
                         </img>
                     </div>
@@ -32,7 +32,7 @@ const Index = () => {
                 <Link href="/inicioVertical?filtro=todos">
                     <div className="img-1">
                         <p className="texto-descripcion-img">Este calendario es recomendado para dispositivos móviles.</p>
-                        <img className="img-calendario-vertical" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/2048px-LEGO_logo.svg.png">
+                        <img className="img-calendario-vertical" src="/images/calendV.png">
                             
                         </img>
                     </div>

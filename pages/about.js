@@ -1,25 +1,26 @@
 import Head from "next/head";
-import data from "../public/data/data2.js";
-import dynamic from "next/dynamic";
-const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
 
 const About = () => {
-  let nombres = [];
-  let datos = data;
-
   return (
     <div className="container">
       <Head>
-        <title>Calendario academico</title>
+        <title>INFO104 About</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">Calendario Academico 2021</h1>
-        <div className="time-line-container">
-          <TimeLine data={datos} />
-        </div>
+        <h1 className="title">Sobre esta página</h1>
+
+        <p className="description">
+          Este código está en <code>pages/about.js</code>
+        </p>
       </main>
+
+      <footer>
+        <a href="https://github.com/PabloSzx/INFO104-2021-1" target="_blank">
+          Repositorio y tutorial
+        </a>
+      </footer>
     </div>
   );
 };

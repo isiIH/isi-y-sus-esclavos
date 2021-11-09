@@ -19,7 +19,7 @@ const inicioVertical = () => {
         <div className="container">
             <Head>
                 <title>Calendario Académico</title>
-                <link rel="icon" href="/uach.png" />
+                <link rel="icon" href="/images/uach.png" />
             </Head>
 
             <main>
@@ -58,6 +58,10 @@ const inicioVertical = () => {
                 </div>
 
                 {calendV}
+
+                <div class="tooltip">Hover over me
+                    <span class="tooltiptext">Tooltip text</span>
+                </div>
 
 
             </main>

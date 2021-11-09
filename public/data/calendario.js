@@ -28,13 +28,80 @@ export function CalendV(f) {
 }
 
 export function CalendH(f) {
-    return(
-        <>
-        <div className="time-line-container">
-            <TimeLine data={dataH(f)} />
-        </div>
-        </>
-    );
+  const config = {
+    header: {
+      top: {
+        style: {
+          backgroundColor: "#95aacd",
+          color: "white",
+          fontSize: 12
+        }
+      },
+      middle: {
+        style: {
+          backgroundColor: "lightgrey",
+          fontSize: 9
+        }
+      },
+      bottom: {
+        style: {
+          background: "white",
+          fontSize: 9,
+          color: "grey"
+        },
+        selectedStyle: {
+          background: "linear-gradient( #d011dd ,#d011dd)",
+          fontWeight: "bold",
+          color: "white"
+        }
+      }
+    },
+    taskList: {
+      title: {
+        label: "Eventos",
+        style: {
+          backgroundColor: "#5b7bb2",
+          color: "White"
+        }
+      },
+      task: {
+        style: {
+          backgroundColor: "white",
+          color: "black"
+        }
+      },
+      verticalSeparator: {
+        style: {
+          backgroundColor: "#5b7bb2"
+        },
+        grip: {
+          style: {
+            backgroundColor: "#5b7bb2"
+          }
+        }
+      }
+    },
+    dataViewPort: {
+      rows: {
+        style: {
+          backgroundColor: "white",
+          borderBottom: "solid 0.1px lightgrey"
+        }
+      },
+      task: {
+        showLabel: false,
+        style: {
+        }
+      }
+    }
+  };
+  return(
+    <>
+      <div className="time-line-container">
+          <TimeLine data={dataH(f)} config={config}/>
+      </div>
+    </>
+  );
 }
 
 export function dataV(filtro) {

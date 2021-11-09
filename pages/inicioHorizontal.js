@@ -20,7 +20,7 @@ const inicioHorizontal = () => {
         <div className="container">
             <Head>
                 <title>Calendario Académico</title>
-                <link rel="icon" href="/uach.png" />
+                <link rel="icon" href="/images/uach.png" />
             </Head>
 
             <main>
