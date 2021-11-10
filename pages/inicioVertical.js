@@ -53,7 +53,7 @@ const inicioVertical = () => {
 
                 <div className="links-items">
                     <Link href="/"><a>Página Principal</a></Link>
-                    <p>&nbsp; &gt; Calendario Horizontal | &nbsp;</p>
+                    <p>&nbsp; &gt; Calendario Vertical | &nbsp;</p>
                     <Link href="/inicioHorizontal?filtro=todos"><a>Ir a calendario horizontal</a></Link>
                 </div>
 

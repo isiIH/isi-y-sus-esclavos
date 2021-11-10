@@ -98,7 +98,7 @@ export function CalendH(f) {
   return(
     <>
       <div className="time-line-container">
-          <TimeLine data={dataH(f)} config={config}/>
+          <TimeLine data={dataH(f)} config={config} mode="month"/>
       </div>
     </>
   );
