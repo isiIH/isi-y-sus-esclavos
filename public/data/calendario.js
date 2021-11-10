@@ -30,27 +30,27 @@ export function CalendV(f) {
 export function CalendH(f) {
   const config = {
     header: {
-      top: {
+      month: {
         style: {
-          backgroundColor: "#95aacd",
+          backgroundColor: "#8FBBAF",
           color: "white",
-          fontSize: 12
+          fontSize: 20
         }
       },
-      middle: {
+      dayOfWeek: {
         style: {
-          backgroundColor: "lightgrey",
+          backgroundColor: "#55726b",
           fontSize: 9
         }
       },
-      bottom: {
+      dayTime: {
         style: {
-          background: "white",
+          background: "#cbcbcb",
           fontSize: 9,
-          color: "grey"
+          color: "black"
         },
         selectedStyle: {
-          background: "linear-gradient( #d011dd ,#d011dd)",
+          backgroundColor: "#5cbbfb",
           fontWeight: "bold",
           color: "white"
         }
@@ -60,7 +60,7 @@ export function CalendH(f) {
       title: {
         label: "Eventos",
         style: {
-          backgroundColor: "#5b7bb2",
+          backgroundColor: "#8FBBAF",
           color: "White"
         }
       },
@@ -72,7 +72,7 @@ export function CalendH(f) {
       },
       verticalSeparator: {
         style: {
-          backgroundColor: "#5b7bb2"
+          backgroundColor: "#8FBBAF"
         },
         grip: {
           style: {
