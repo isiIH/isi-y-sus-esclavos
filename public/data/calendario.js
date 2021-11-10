@@ -89,7 +89,7 @@ export function CalendH(f) {
         }
       },
       task: {
-        showLabel: false,
+        showLabel: false ,
         style: {
         }
       }
