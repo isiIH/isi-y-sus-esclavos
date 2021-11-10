@@ -23,12 +23,10 @@ const inicioHorizontal = () => {
     const [bool, setBool] = useState(false);
     const [mostrar, setMostrar] = useState(b1);
     const [tiempo, setTiempo] = useState("month");
-    const [descr, setDescr] = useState();
     
     useEffect(() => {
         if(router.query.filtro != undefined){
             var data = dataH(router.query.filtro,bool);
-            setDescr(data[2].description);
             if(data.length != 0){
                 setCalendH(CalendH(data,tiempo));
             } else {
@@ -98,12 +96,12 @@ const inicioHorizontal = () => {
                     Año
                 </button>
                 {mostrar}
-                
-                <div className="tooltip">Descripcion:
-                    <span className="tooltiptext">{descr}</span>
-                </div>
 
                 {calendH}
+                
+                <div className="tooltip">Descripcion:
+                    <span className="tooltiptext">uwu</span>
+                </div>
     
             </main>
 

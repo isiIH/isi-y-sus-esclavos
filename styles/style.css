@@ -224,11 +224,6 @@ main a {
   transition: .4s;
 }
 
-.timeLine-main-data-row div:hover ~ .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
