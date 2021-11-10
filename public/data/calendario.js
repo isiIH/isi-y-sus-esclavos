@@ -27,7 +27,40 @@ export function CalendV(f) {
     );
 }
 
-export function CalendH(f) {
+export function dataV(filtro) {
+  var data = [];
+
+  for(var i=0; i<items.eventos.length; i++){
+    if(filtro == "todos" || filtro == items.eventos[i].tipo || filtro == items.eventos[i].semestre){      
+      var fecha;
+
+      if(items.eventos[i].fechaInicio == "?"){
+        fecha = items.eventos[i].fechaTermino;
+      } else {
+        if(items.eventos[i].fechaInicio != ""){
+          fecha = "Desde el " + items.eventos[i].fechaInicio.substring(0,10);
+          if(items.eventos[i].fechaTermino != ""){
+            fecha += " hasta el " + items.eventos[i].fechaTermino.substring(0,10);
+          }
+        } else {
+          fecha = "Hasta el " + items.eventos[i].fechaTermino.substring(0,10);
+        }
+      }
+
+      data.push(
+        {
+          title: items.eventos[i].titulo,
+          cardTitle: fecha,
+          cardDetailedText: items.eventos[i].descripcion,
+        }
+      );
+    }
+  }
+
+  return (data);
+}
+
+export function CalendH(data,tiempo) {
   const config = {
     header: {
       month: {
@@ -89,7 +122,7 @@ export function CalendH(f) {
         }
       },
       task: {
-        showLabel: false ,
+        showLabel: true ,
         style: {
         }
       }
@@ -98,50 +131,26 @@ export function CalendH(f) {
   return(
     <>
       <div className="time-line-container">
-          <TimeLine data={dataH(f)} config={config} mode="month"/>
+          <TimeLine data={data} config={config} mode={tiempo}/>
       </div>
+      
+      <ul className="legend">
+        <li><span className="beneficios" style={{ backgroundColor:items.leyenda[0].color }}></span>Beneficios</li>
+        <li><span className="academicos" style={{ backgroundColor:items.leyenda[1].color }}></span>Académico</li>
+        <li><span className="funcionarios" style={{ backgroundColor:items.leyenda[2].color }}></span>Funcionarios</li>
+        <li><span className="cultural" style={{ backgroundColor:items.leyenda[3].color }}></span>Cultural</li>
+        <li><span className="otros" style={{ backgroundColor:items.leyenda[4].color }}></span>Otros</li>
+      </ul>
     </>
   );
 }
 
-export function dataV(filtro) {
+export function dataH(filtro,bool) {
     var data = [];
-    for(var i=0; i<items.eventos.length; i++){
-        if(filtro == "todos" || filtro == items.eventos[i].tipo || filtro == items.eventos[i].semestre){
-            var diai = items.eventos[i].fechaInicio[0] + items.eventos[i].fechaInicio[1];
-            var mesi = items.eventos[i].fechaInicio[3] + items.eventos[i].fechaInicio[4];
-            var diaf = items.eventos[i].fechaTermino[0] + items.eventos[i].fechaTermino[1];
-            var mesf = items.eventos[i].fechaTermino[3] + items.eventos[i].fechaTermino[4];
-            
-            var fecha;
-
-            if(items.eventos[i].fechaInicio == "?"){
-                fecha = items.eventos[i].fechaTermino;
-            } else {
-                if(items.eventos[i].fechaInicio != ""){
-                    fecha = "Desde el " + diai + "/" + mesi;
-                    if(items.eventos[i].fechaTermino != ""){
-                        fecha += " hasta el " + diaf + "/" + mesf;
-                    }
-                } else {
-                    fecha = "Hasta el " + diaf + "/" + mesf;
-                }
-            }
-            data.push(
-                {
-                    title: items.eventos[i].titulo,
-                    cardTitle: fecha,
-                    cardDetailedText: items.eventos[i].descripcion,
-                }
-            );
-        }
-    }
-
-    return (data);
-}
-
-function dataH(filtro) {
-    var data = [];
+    var hoy = new Date();
+    var dia = hoy.getDate();
+    var mes = hoy.getMonth()+1;
+    var año = hoy.getFullYear();
 
     for (var i = 0; i < items.eventos.length; i++) {
         if(filtro == "todos" || filtro == items.eventos[i].tipo || filtro == items.eventos[i].semestre){
@@ -169,15 +178,30 @@ function dataH(filtro) {
                 j++;
             }
 
-            data.push(
-                {
+            var mostrar;
+            if(parseInt(año_fin) > año)
+              mostrar = true;
+            else 
+              if(parseInt(año_fin) == año && parseInt(mes_fin) > mes)
+                mostrar = true;
+              else 
+                if(parseInt(año_fin) == año && parseInt(mes_fin) == mes && parseInt(dia_fin) >= dia)
+                  mostrar = true;
+                else
+                  mostrar = false;
+
+            if(bool || mostrar){
+              data.push(
+                  {
                     id: i,
                     name: items.eventos[i].titulo,
+                    description: items.eventos[i].descripcion,
                     start: new Date(año_inicio, mes_inicio - 1, dia_inicio),
                     end: new Date(año_fin, mes_fin - 1, dia_fin),
                     color: items.leyenda[j].color
-                }
-            );
+                  }
+              );
+            }
         }
     }
     

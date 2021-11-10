@@ -2,19 +2,50 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useState,useEffect } from "react";
 import { useRouter } from "next/router";
-import { CalendH } from "../public/data/calendario";
-import items from "../public/data/calendario.json";
+import { CalendH, dataH } from "../public/data/calendario";
 
 const inicioHorizontal = () => {
     const router = useRouter();
 
-    const [calendH, setCalendH]=useState();
+    const b1 = <>
+        <button onClick={() => setBool(!bool)}>
+            Ver todos los eventos
+        </button>
+    </>
+
+    const b2 = <>
+        <button onClick={() => setBool(!bool)}>
+            Ver eventos según la fecha
+        </button>
+    </>
+
+    const [calendH, setCalendH] = useState();
+    const [bool, setBool] = useState(false);
+    const [mostrar, setMostrar] = useState(b1);
+    const [tiempo, setTiempo] = useState("month");
+    const [descr, setDescr] = useState();
     
     useEffect(() => {
         if(router.query.filtro != undefined){
-            setCalendH(CalendH(router.query.filtro));
+            var data = dataH(router.query.filtro,bool);
+            setDescr(data[2].description);
+            if(data.length != 0){
+                setCalendH(CalendH(data,tiempo));
+            } else {
+                setCalendH(
+                    <div className="sin-eventos">
+                        No se han encontrado eventos para esta fecha, pruebe pulsando "ver todos los eventos"<br/>
+                        Debe desplazarse hacia la izquierda para ver los eventos anteriores
+                    </div>
+                );
+            }
+            if(bool == true){
+                setMostrar(b2);
+            } else {
+                setMostrar(b1);
+            }
         }
-    },[router.query.filtro]);
+    },[router.query.filtro,tiempo,bool]);
 
     return (
         <div className="container">
@@ -57,14 +88,22 @@ const inicioHorizontal = () => {
                     <Link href="/inicioVertical?filtro=todos"><a>Ir a calendario vertical</a></Link>
                 </div>
 
+                <button onClick={() => setTiempo("week")}>
+                    Semana
+                </button>
+                <button onClick={() => setTiempo("month")}>
+                    Mes
+                </button>
+                <button onClick={() => setTiempo("year")}>
+                    Año
+                </button>
+                {mostrar}
+                
+                <div className="tooltip">Descripcion:
+                    <span className="tooltiptext">{descr}</span>
+                </div>
+
                 {calendH}
-                <ul className="legend">
-                    <li><span className="beneficios" style={{ backgroundColor:items.leyenda[0].color }}></span>Beneficios</li>
-                    <li><span className="academicos" style={{ backgroundColor:items.leyenda[1].color }}></span>Académico</li>
-                    <li><span className="funcionarios" style={{ backgroundColor:items.leyenda[2].color }}></span>Funcionarios</li>
-                    <li><span className="cultural" style={{ backgroundColor:items.leyenda[3].color }}></span>Cultural</li>
-                    <li><span className="otros" style={{ backgroundColor:items.leyenda[4].color }}></span>Otros</li>
-                </ul>
     
             </main>
 

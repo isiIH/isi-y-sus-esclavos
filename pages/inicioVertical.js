@@ -7,8 +7,8 @@ import { CalendV } from "../public/data/calendario";
 const inicioVertical = () => {
     const router = useRouter();
 
-    const [calendV, setCalendV]=useState();
-    
+    const [calendV, setCalendV] = useState();
+
     useEffect(() => {
         if(router.query.filtro != undefined){
             setCalendV(CalendV(router.query.filtro));
@@ -58,11 +58,6 @@ const inicioVertical = () => {
                 </div>
 
                 {calendV}
-
-                <div class="tooltip">Hover over me
-                    <span class="tooltiptext">Tooltip text</span>
-                </div>
-
 
             </main>
 

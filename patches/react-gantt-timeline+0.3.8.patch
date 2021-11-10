@@ -1,0 +1,105 @@
+diff --git a/node_modules/react-gantt-timeline/src/lib/TimeLine.css b/node_modules/react-gantt-timeline/src/lib/TimeLine.css
+index 70d3d4f..66bc3c9 100644
+--- a/node_modules/react-gantt-timeline/src/lib/TimeLine.css
++++ b/node_modules/react-gantt-timeline/src/lib/TimeLine.css
+@@ -108,7 +108,6 @@
+     overflow: hidden;
+     background-color:#fbf9f9;;
+     
+-    
+ }
+ .timeLine-main-data-container{
+     position: relative;
+diff --git a/node_modules/react-gantt-timeline/src/lib/TimeLine.js b/node_modules/react-gantt-timeline/src/lib/TimeLine.js
+index ad05363..1245857 100644
+--- a/node_modules/react-gantt-timeline/src/lib/TimeLine.js
++++ b/node_modules/react-gantt-timeline/src/lib/TimeLine.js
+@@ -50,7 +50,7 @@ class TimeLine extends Component{
+             dayWidth:dayWidth,
+             interactiveMode:false,
+             taskToCreate:null,
+-            links:[],
++            links:null,
+             mode:this.props.mode?this.props.mode:VIEW_MODE_MONTH,
+             size:{width:1,height:1},
+             changingTask:null
+diff --git a/node_modules/react-gantt-timeline/src/lib/components/common/ContentEditable.js b/node_modules/react-gantt-timeline/src/lib/components/common/ContentEditable.js
+index 8b6d5ca..152fefb 100644
+--- a/node_modules/react-gantt-timeline/src/lib/components/common/ContentEditable.js
++++ b/node_modules/react-gantt-timeline/src/lib/components/common/ContentEditable.js
+@@ -63,7 +63,7 @@ export default class ContentEditable extends Component{
+                     name="name" 
+                     value={this.state.value} 
+                     onKeyUp={this.handleKey}
+-                    onChange={this.handleChange}/>
++                    onChange={this.handleChange} readOnly/>
+     }
+ 
+     render(){
+diff --git a/node_modules/react-gantt-timeline/src/lib/components/taskList/TaskList.js b/node_modules/react-gantt-timeline/src/lib/components/taskList/TaskList.js
+index bb8956f..5bf2575 100644
+--- a/node_modules/react-gantt-timeline/src/lib/components/taskList/TaskList.js
++++ b/node_modules/react-gantt-timeline/src/lib/components/taskList/TaskList.js
+@@ -28,12 +28,12 @@ export class TaskRow extends Component{
+ 
+         return (
+         <div className="timeLine-side-task-row" 
+-             style={{...Config.values.taskList.task.style,top:this.props.top,height:this.props.itemheight}}
+-             onClick={(e)=>this.props.onSelectItem(this.props.item)}>
++            style={{...Config.values.taskList.task.style,top:this.props.top,height:this.props.itemheight}}
++            onClick={(e)=>this.props.onSelectItem(this.props.item)}>
+ 
+-             <ContentEditable value={this.props.label} 
+-                              index={this.props.index}
+-                              onChange={this.onChange}/>
++            <ContentEditable value={this.props.label} 
++                            index={this.props.index}
++                            onChange={this.onChange}/>
+     
+             
+         </div>)    
+@@ -54,14 +54,14 @@ export default class TaskList extends Component{
+             let item=data[i];
+             if(!item) break
+             result.push(<TaskRow key={i}  
+-                                 index={i}  
+-                                 item={item}
+-                                 label={item.name} 
+-                                 top={i*this.props.itemheight} 
+-                                 itemheight={this.props.itemheight} 
+-                                 isSelected={this.props.selectedItem==item}
+-                                 onUpdateTask={this.props.onUpdateTask}
+-                                 onSelectItem={this.props.onSelectItem}></TaskRow>);
++                                index={i}  
++                                item={item}
++                                label={item.name} 
++                                top={i*this.props.itemheight} 
++                                itemheight={this.props.itemheight} 
++                                isSelected={this.props.selectedItem==item}
++                                onUpdateTask={this.props.onUpdateTask}
++                                onSelectItem={this.props.onSelectItem}></TaskRow>);
+                         
+         }
+         return result;
+@@ -76,7 +76,7 @@ export default class TaskList extends Component{
+             <div className="timeLine-side"> 
+                 <div className="timeLine-side-title" style={Config.values.taskList.title.style}>
+                     <div>
+-                      {Config.values.taskList.title.label}
++                        {Config.values.taskList.title.label}
+                     </div>  
+                 </div>    
+                 <div ref="taskViewPort"  className="timeLine-side-task-viewPort" onScroll={this.doScroll}  >                
+diff --git a/node_modules/react-gantt-timeline/src/lib/components/taskList/TaskList.spec.js b/node_modules/react-gantt-timeline/src/lib/components/taskList/TaskList.spec.js
+index 062ad8f..852cb5b 100644
+--- a/node_modules/react-gantt-timeline/src/lib/components/taskList/TaskList.spec.js
++++ b/node_modules/react-gantt-timeline/src/lib/components/taskList/TaskList.spec.js
+@@ -33,7 +33,7 @@ describe('Testing Firing Events ', function () {
+         expect(onSelectItem.mock.calls.length).toBe(18);
+         for(let i=0;i<18;i++){
+             expect(onSelectItem.mock.calls[i][0]).toBe(data[i])
+-       }
++        }
+ 
+         wrapper.unmount()
+ 
