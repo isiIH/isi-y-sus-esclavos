@@ -23,18 +23,16 @@ const Index = () => {
                 <Link href="/inicioHorizontal?filtro=todos">
                     <div className="img-1">
                         <p className="texto-descripcion-img">Este calendario es recomendado para PC.</p>
-                        <img className="img-calendario-horizontal" src="/images/calendH.png">
-                            
-                        </img>
+                        <img className="img-calendario-horizontal" src="/images/calendH.png" 
+                            alt="Calendario horizontal"/>
                     </div>
                 </Link>
                     
                 <Link href="/inicioVertical?filtro=todos">
                     <div className="img-1">
                         <p className="texto-descripcion-img">Este calendario es recomendado para dispositivos móviles.</p>
-                        <img className="img-calendario-vertical" src="/images/calendV.png">
-                            
-                        </img>
+                        <img className="img-calendario-vertical" src="/images/calendV.png" 
+                        alt="Calendario vertical"/>
                     </div>
                 </Link>
             </div>

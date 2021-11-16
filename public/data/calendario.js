@@ -122,7 +122,7 @@ export function CalendH(data,tiempo) {
         }
       },
       task: {
-        showLabel: false,
+        showLabel: true,
         style: {
         }
       }
@@ -195,6 +195,7 @@ export function dataH(filtro,bool) {
                   {
                     id: i,
                     name: items.eventos[i].titulo,
+                    description: items.eventos[i].descripcion,
                     start: new Date(año_inicio, mes_inicio - 1, dia_inicio),
                     end: new Date(año_fin, mes_fin - 1, dia_fin),
                     color: items.leyenda[j].color

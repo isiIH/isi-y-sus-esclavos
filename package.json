@@ -6,11 +6,13 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
-    "start": "next start -p 3003"
+    "start": "next start -p 3003",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "next": "^11.1.2",
+    "patch-package": "^6.4.7",
     "react": "^17.0.2",
     "react-chrono": "^1.12.1",
     "react-dom": "^17.0.2",
