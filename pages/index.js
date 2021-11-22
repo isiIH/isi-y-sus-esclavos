@@ -29,7 +29,7 @@ const Index = () => {
                 </Link>
                     
                 <Link href="/inicioVertical?filtro=todos">
-                    <div className="img-1">
+                    <div className="img-2">
                         <p className="texto-descripcion-img">Este calendario es recomendado para dispositivos móviles.</p>
                         <img className="img-calendario-vertical" src="/images/calendV.png" 
                         alt="Calendario vertical"/>

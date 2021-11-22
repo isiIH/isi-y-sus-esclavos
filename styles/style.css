@@ -1,82 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Comfortaa&display=swap");
 :root {
   --color_blanco: #fff;
-  --color_fondo_1: #D6F8B8;
-  --color_fondo_2: #ACDEAA;
-  --color_menu_1: #8FBBAF;
+  --color_fondo_1: #d6f8b8;
+  --color_fondo_2: #acdeaa;
+  --color_menu_1: #8fbbaf;
   --color_texto_1: #677b8e;
   --color_negro: #000;
 }
-html
-,body{
+html,
+body {
   padding: 0;
   margin: 0;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   background-color: var(--color_fondo_1);
 }
 
-.title a {
+.title a{
   color: #0070f3;
   text-decoration: none;
 }
+.title{
+  font-size: 3rem;
+  padding: 0;
+  margin-bottom: 1rem;
+  border: 0;
+  align-items: center;
+  text-align: center;
+}
 
-.contenedor-principal{
-
+.contenedor-principal {
   min-height: 100vh;
-  display:flex;
+  display: flex;
   margin-top: 3rem;
   flex-direction: column;
 }
 
-.contenedor-imagenes{
-  margin:4rem;
-  display:flex;
+.contenedor-calendario-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-imagenes {
+  margin: 4rem;
+  display: flex;
   justify-content: space-around;
 }
 
-.img-calendario-horizontal{
+.img-calendario-horizontal, .img-calendario-vertical{
   cursor: pointer;
 }
 
-.img-calendario-vertical{
-  cursor: pointer;
-}
-
-.texto-descripcion-img{
+.texto-descripcion-img {
   display: none;
   position: absolute;
-  margin-left: 3rem;
-  margin-top:9rem;
+  margin: 9rem;
 }
 
-.img-1:hover>img{
+.img-1:hover > img,
+.img-2:hover > img {
   transition: 1s;
   filter: blur(10px);
 }
 
-.img-1:hover>p{
-  transition:1s;
+/*img:hover {
+  transition: 1s;
+  filter: blur(10px);
+}*/
+
+.img-1:hover > p, .img-2:hover > p {
+  transition: 1s;
   display: block;
   z-index: 10;
+
   font-size: 1.7rem;
   filter: none;
   transition: 1s;
-  cursor: pointer;
+  text-align: center;
+  /*width: 15rem;*/
 }
 
-.titulo{
+.titulo {
   text-align: center;
   font-size: 5rem;
   margin-top: auto;
 }
 
-.descripcion{
+.descripcion {
   font-size: 2rem;
   opacity: 1;
   text-align: center;
-} 
+}
 
+footer {
+  text-align: center;
+  margin: 30px auto;
+}
+footer > p{
+  display:inline;
+}
+footer > a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: var(--color_menu_1);
+  margin:0;
+}
+#btn-menu {
+  display: none;
+}
+#semestre > ul {
+  display: none;
+  flex-direction: column;
+}
+#semestre {
+  cursor: pointer;
+}
+#semestre:hover > ul{
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+header label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-right: 1px solid #fff;
+}
+header label:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.menu{
+  width: 100%;
+}
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.menu li {
+  border-right: 1px solid #fff;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.menu li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.menu li ul{
+  text-align: center;
+  width: 7.3rem;
+  font-size: 1.5rem;
+  display:none;
+  position: absolute;
+  border:1px solid #fff;
+  background-color:var(--color_menu_1);
+  z-index: 1000;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+}
 .links-items {
   display: flex;
   flex-direction: row;
@@ -84,62 +180,9 @@ html
   align-items: center;
 }
 
-.menu {
-  background-color: #8FBBAF;
-  color:#fff;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3em;
-  width: 100%;
-}
-
-.menu a {
-  margin: 0 20px 0 20px;
-  border-bottom: 3px solid #e0e0e0;
-  color:#fff;
-  text-align: center;
-  padding: 7px 13px;
-  text-decoration: none;
-  font-size: 18px;
-  display: block;
-  text-transform: uppercase;
-}
-
-.menu-items{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin: 10px 20px 10px 20px;
-}
-
-
-.menu-items li>a:hover{
-  background-color: rgba(0,0,0,.3);
-  transition: .4s;
-}
-
-.menu-items>li{
-  float: left;
-  text-align:center;
-  cursor: pointer;
-}
-
-.menu-items>li>ul{
-  display: none;
-  background-color: #8FBBAF;
-}
-
-.menu-items>li:hover>ul {
-  display:block;
-  position:absolute;
-  z-index:1;
-  padding:0;
-  border-bottom: 3px solid #e0e0e0;
-}
-
-.menu-items>li>ul>li>a {
-  border-bottom: none;
+.links-items > p {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 main a {
@@ -150,22 +193,116 @@ main a {
 .container {
   width: 100%;
 }
-
-.time-line-container{
+.time-line-container {
   width: 90%;
-  height: 40rem;
+  margin:15px auto;
 }
-
-.footer {
-  position:absolute;
+.volver{
+  list-style: none;
+  display: flex;
+  float: right;
+  background-color: var(--color_menu_1);
+  margin: 0;
+  padding: 0;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.5rem;
+  border-left: 1px solid var(--color_blanco);
+  border-right: 1px solid var(--color_blanco);
 }
 
-/* basic positioning */
+.volver a{
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.volver:hover{
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+}
+#volver-1-horizontal{
+  display:none;
+}
+#volver-1-vertical{
+  display: none;
+}
+@media (max-width: 1000px) {
+  .contenedor-imagenes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /*.img-1 {
+    margin-bottom: 5rem;
+  }*/
+}
+
+@media (max-width: 768px) {
+  header label {
+    display: block;
+    
+  }
+  header {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .menu {
+    position: absolute;
+    background-color: var(--color_menu_1);
+    width: 100%;
+    margin-left: -100%;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 1000;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu li {
+    border-top: 1px solid #fff;
+  }
+
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+  .menu li ul{
+    position: relative;
+    width: 100%;
+  }
+  #volver-1-horizontal{
+    display:block;
+  }
+  #volver-2-horizontal{
+    display:none;
+  }
+  #volver-1-vertical{
+    display:block;
+  }
+  #volver-2-vertical{
+    display:none;
+  }
+  .volver a{
+    display: block;
+    padding: 10.5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+}
+
 .legend { 
-  list-style: none; 
+  list-style: none;
+  overflow:hidden;
+  padding:0;
+  display: flex;
+  justify-content: center;
 }
 .legend li { 
   float: left; 
@@ -179,44 +316,29 @@ main a {
   margin: 2px; 
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+.botones {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
+.boton {
+  padding: .375rem .75rem;
+  margin-right: 10px;
+  border-radius: .25rem;
+  background-color: var(--color_menu_1);
   color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text */
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-
-  /* Fade in tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
+  border-color: var(--color_menu_1);
+  transition: background-color .15s ease-in-out;
 }
 
-/* Tooltip arrow */
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+.boton:hover, .boton:focus {
+  background-color: var(--color_texto_1);
+}
+
+.boton:active {
+  background-color: var(--color_texto_1);
 }
 
 .timeLine-main-data-row div:hover {
@@ -224,12 +346,6 @@ main a {
   transition: .4s;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
 .timeLine-main-data-task-side-linker{
   display:none;
 }
-

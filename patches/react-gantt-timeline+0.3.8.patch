@@ -13,14 +13,16 @@ index 8b6d5ca..4be330b 100644
  
      render(){
 diff --git a/node_modules/react-gantt-timeline/src/lib/components/viewport/DataTask.js b/node_modules/react-gantt-timeline/src/lib/components/viewport/DataTask.js
-index f7794c2..14e4887 100644
+index f7794c2..9b02a07 100644
 --- a/node_modules/react-gantt-timeline/src/lib/components/viewport/DataTask.js
 +++ b/node_modules/react-gantt-timeline/src/lib/components/viewport/DataTask.js
-@@ -117,7 +117,7 @@ export default class DataTask extends Component{
+@@ -116,8 +116,8 @@ export default class DataTask extends Component{
+                 <div  className="timeLine-main-data-task-side-linker" 
                      onMouseUp={(e)=>this.onCreateLinkMouseUp(e,LINK_POS_LEFT)}/>
              </div>
-             <div style={{overflow:'hidden'}}>
+-            <div style={{overflow:'hidden'}}>
 -            {Config.values.dataViewPort.task.showLabel?this.props.item.name:""}
++            <div className="hola" style={{overflow:'hidden'}}>
 +            {Config.values.dataViewPort.task.showLabel?this.props.item.description:""}
              </div>
              <div className="timeLine-main-data-task-side" 

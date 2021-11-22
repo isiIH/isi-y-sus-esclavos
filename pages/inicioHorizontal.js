@@ -8,13 +8,13 @@ const inicioHorizontal = () => {
     const router = useRouter();
 
     const b1 = <>
-        <button onClick={() => setBool(!bool)}>
+        <button className="boton" onClick={() => setBool(!bool)}>
             Ver todos los eventos
         </button>
     </>
 
     const b2 = <>
-        <button onClick={() => setBool(!bool)}>
+        <button className="boton" onClick={() => setBool(!bool)}>
             Ver eventos según la fecha
         </button>
     </>
@@ -31,9 +31,9 @@ const inicioHorizontal = () => {
                 setCalendH(CalendH(data,tiempo));
             } else {
                 setCalendH(
-                    <div className="sin-eventos">
-                        No se han encontrado eventos para esta fecha, pruebe pulsando "ver todos los eventos"<br/>
-                        Debe desplazarse hacia la izquierda para ver los eventos anteriores
+                    <div className="time-line-container">
+                        <p id="sin-eventos">No se han encontrado eventos para esta fecha, pruebe pulsando "ver todos los eventos"<br/>
+                        Debe desplazarse hacia la izquierda para ver los eventos anteriores</p>
                     </div>
                 );
             }
@@ -46,7 +46,7 @@ const inicioHorizontal = () => {
     },[router.query.filtro,tiempo,bool]);
 
     return (
-        <div className="container">
+        <div className="contenedor-principal">
             <Head>
                 <title>Calendario Académico</title>
                 <link rel="icon" href="/images/uach.png" />
@@ -54,66 +54,67 @@ const inicioHorizontal = () => {
 
             <main>
 
-                <nav className="menu">
-                    <label className="logo">Calendario UACh</label>
-                    <ul className="menu-items">
-                        <li><a href="/inicioHorizontal?filtro=todos">Todo</a></li>
 
-                        <li><a>Semestre</a>
-                            <ul>
-                                <li><a href="/inicioHorizontal?filtro=1">Semestre 1</a></li>
-                                <li><a href="/inicioHorizontal?filtro=2">Semestre 2</a></li>
-                            </ul>
-                        </li>
+                <h1 className="title">Calendario Académico UACH 2021</h1>
 
-                        <li><a href="/inicioHorizontal?filtro=beneficios">Beneficios</a></li>
-
-                        <li><a href="/inicioHorizontal?filtro=academico">Académico</a></li>
-
-                        <li><a href="/inicioHorizontal?filtro=funcionarios">Funcionarios</a></li>
-
-                        <li><a href="/inicioHorizontal?filtro=cultural">Cultural</a></li>
-
-                        <li><a href="/inicioHorizontal?filtro=otros">Otros</a></li>
-
+                <header>
+                    <input type="checkbox" id="btn-menu"></input>
+                    <ul id="volver-1-horizontal" className="volver">
+                        <li><a href="/"> Volver</a></li>
                     </ul>
+                    <label for="btn-menu"><img width="30px" src="images/imgmenu.png"></img></label>
+                    <nav className="menu">
+                    
+                        <ul>
+                            <li><a href="/inicioHorizontal?filtro=todos">Todo</a></li>
+                            <li id="semestre"><a>Semestre</a>
+                                <ul>
+                                    <li><a href="/inicioHorizontal?filtro=1">Semestre 1</a></li>
+                                    <li><a href="/inicioHorizontal?filtro=2">Semestre 2</a></li>
+                                </ul>
+                            </li>
 
-                </nav>
+                            <li><a href="/inicioHorizontal?filtro=beneficios">Beneficios</a></li>
 
-                <div className="links-items">
-                    <Link href="/"><a>Página Principal</a></Link>
-                    <p>&nbsp; &gt; Calendario Horizontal | &nbsp;</p>
-                    <Link href="/inicioVertical?filtro=todos"><a>Ir a calendario vertical</a></Link>
+                            <li><a href="/inicioHorizontal?filtro=academico">Académico</a></li>
+
+                            <li><a href="/inicioHorizontal?filtro=funcionarios">Funcionarios</a></li>
+
+                            <li><a href="/inicioHorizontal?filtro=cultural">Cultural</a></li>
+
+                            <li><a href="/inicioHorizontal?filtro=otros">Otros</a></li>
+                            
+                        </ul>
+                    </nav>
+                    <ul id = "volver-2-horizontal" className="volver" >
+                        <li><a href="/"> Volver</a></li>
+                    </ul>
+                </header>
+
+                <div className="botones">
+                    <button className="boton" onClick={() => setTiempo("week")}>
+                        Semana
+                    </button>
+                    <button className="boton" onClick={() => setTiempo("month")}>
+                        Mes
+                    </button>
+                    <button className="boton" onClick={() => setTiempo("year")}>
+                        Año
+                    </button>
+                    {mostrar}
                 </div>
-
-                <button onClick={() => setTiempo("week")}>
-                    Semana
-                </button>
-                <button onClick={() => setTiempo("month")}>
-                    Mes
-                </button>
-                <button onClick={() => setTiempo("year")}>
-                    Año
-                </button>
-                {mostrar}
 
                 {calendH}
-                
-                <div className="tooltip">Descripcion:
-                    <span className="tooltiptext">uwu</span>
-                </div>
+
     
             </main>
 
 
             <footer>
-                <a className="xd" href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
-                    La isi hizo esto.
+                <a href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
+                    La isi hizo esto
                 </a>
-                &nbsp;-&nbsp;
-                <Link href="/about">
-                    <a className="xd">Derechos Reservados 2021.</a>
-                </Link>
+                <p>&nbsp;-&nbsp; Derechos Reservados 2021.</p>
             </footer>
         </div>
     );

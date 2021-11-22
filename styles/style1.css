@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Comfortaa&display=swap');
+:root {
+  --color_blanco: #fff;
+  --color_fondo_1: #D6F8B8;
+  --color_fondo_2: #ACDEAA;
+  --color_menu_1: #8FBBAF;
+  --color_texto_1: #677b8e;
+  --color_negro: #000;
+}
+html
+,body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  background-color: var(--color_fondo_1);
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.contenedor-principal{
+
+  min-height: 100vh;
+  display:flex;
+  margin-top: 3rem;
+  flex-direction: column;
+}
+
+.contenedor-imagenes{
+  margin:4rem;
+  display:flex;
+  justify-content: space-around;
+}
+
+.img-calendario-horizontal{
+  cursor: pointer;
+}
+
+.img-calendario-vertical{
+  cursor: pointer;
+}
+
+.texto-descripcion-img{
+  display: none;
+  position: absolute;
+  margin-left: 3rem;
+  margin-top:9rem;
+}
+
+.img-1:hover>img{
+  transition: 1s;
+  filter: blur(10px);
+}
+
+.img-1:hover>p{
+  transition:1s;
+  display: block;
+  z-index: 10;
+  font-size: 1.7rem;
+  filter: none;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.titulo{
+  text-align: center;
+  font-size: 5rem;
+  margin-top: auto;
+}
+
+.descripcion{
+  font-size: 2rem;
+  opacity: 1;
+  text-align: center;
+} 
+
+.links-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.menu {
+  background-color: #8FBBAF;
+  color:#fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  width: 100%;
+}
+
+.menu a {
+  margin: 0 20px 0 20px;
+  border-bottom: 3px solid #e0e0e0;
+  color:#fff;
+  text-align: center;
+  padding: 7px 13px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*.menu-items{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 20px 10px 20px;
+}*/
+
+li {
+  flex:left;
+}
+
+
+.menu-items li>a:hover{
+  background-color: rgba(0,0,0,.3);
+  transition: .4s;
+}
+
+.menu-items>li{
+  float: left;
+  text-align:center;
+  cursor: pointer;
+}
+
+.menu-items>li>ul{
+  display: none;
+  background-color: #8FBBAF;
+}
+
+.menu-items>li:hover>ul {
+  display:block;
+  position:absolute;
+  z-index:1;
+  padding:0;
+  border-bottom: 3px solid #e0e0e0;
+}
+
+.menu-items>li>ul>li>a {
+  border-bottom: none;
+}
+
+main a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+}
+
+.time-line-container{
+  width: 90%;
+  margin:auto;
+}
+
+.footer {
+  position:absolute;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* basic positioning */
+.legend { 
+  list-style: none;
+  overflow:hidden;
+  padding:0;
+  display: flex;
+  justify-content: center;
+}
+.legend li { 
+  float: left; 
+  margin-right: 10px; 
+}
+.legend span { 
+  border: 1px solid #ccc; 
+  float: left; 
+  width: 12px; 
+  height: 12px; 
+  margin: 2px; 
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.timeLine-main-data-row div:hover {
+  opacity:0.8;
+  transition: .4s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.timeLine-main-data-task-side-linker{
+  display:none;
+}
+
+.hola {
+  color:#000;
+}
+
+.boton {
+  justify-content: center;
+}

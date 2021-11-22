@@ -6,7 +6,7 @@ const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
 export function CalendV(f) {
     return(
         <>
-        <div style={{ width: "900px", height: "700px" }}>
+        <div className="time-line-container" style={{height: "700px" }}>
             <Chrono 
                 items={dataV(f)} 
                 enableOutline
