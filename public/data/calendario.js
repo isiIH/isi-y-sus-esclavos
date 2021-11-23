@@ -6,7 +6,7 @@ const TimeLine = dynamic(() => import("react-gantt-timeline"), { ssr: false });
 export function CalendV(f) {
     return(
         <>
-        <div className="time-line-container" style={{height: "700px" }}>
+        <div className="time-line-container" style={{height: "700px",width:"700px"}}>
             <Chrono 
                 items={dataV(f)} 
                 enableOutline
@@ -122,7 +122,7 @@ export function CalendH(data,tiempo) {
         }
       },
       task: {
-        showLabel: true,
+        showLabel: false,
         style: {
         }
       }
@@ -130,8 +130,9 @@ export function CalendH(data,tiempo) {
   };
   return(
     <>
+      <p id="text-calend">Desplácese a la izquierda si no visualiza los eventos</p>
       <div className="time-line-container">
-          <TimeLine data={data} config={config} mode={tiempo}/>
+          <TimeLine data={data} config={config} mode={tiempo} nonEditableName={true}/>
       </div>
       
       <ul className="legend">

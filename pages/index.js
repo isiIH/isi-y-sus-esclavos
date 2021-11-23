@@ -22,17 +22,27 @@ const Index = () => {
                 
                 <Link href="/inicioHorizontal?filtro=todos">
                     <div className="img-1">
-                        <p className="texto-descripcion-img">Este calendario es recomendado para PC.</p>
-                        <img className="img-calendario-horizontal" src="/images/calendH.png" 
+                        <img className="img-calendario-horizontal" src="/images/img-1.png" 
                             alt="Calendario horizontal"/>
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">Calendario Horizontal</div>
+                            <p class="image__description">
+                                Recomendado para pc.
+                            </p>
+                        </div>
                     </div>
                 </Link>
                     
                 <Link href="/inicioVertical?filtro=todos">
                     <div className="img-2">
-                        <p className="texto-descripcion-img">Este calendario es recomendado para dispositivos móviles.</p>
-                        <img className="img-calendario-vertical" src="/images/calendV.png" 
+                        <img className="img-calendario-vertical" src="/images/img-2.png" 
                         alt="Calendario vertical"/>
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">Calendario Vertical</div>
+                            <p class="image__description">
+                                Recomendado para dispositivos móviles.
+                            </p>
+                        </div>
                     </div>
                 </Link>
             </div>
@@ -42,10 +52,7 @@ const Index = () => {
             <a href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
                 Repositorio
             </a>
-            &nbsp;-&nbsp;
-            <Link href="/about">
-                <a>Sobre esta página</a>
-            </Link>
+            <p>&nbsp;-&nbsp;Sobre esta página</p>
         </footer>
     </div>
     );
