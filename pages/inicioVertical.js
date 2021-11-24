@@ -37,7 +37,7 @@ const inicioVertical = () => {
                         <ul>
                             <li><a href="/inicioVertical?filtro=todos">Todo</a></li>
 
-                            <li><a>Semestre</a>
+                            <li id="semestre"><a>Semestre</a>
                                 <ul>
                                     <li><a href="/inicioVertical?filtro=1">Semestre 1</a></li>
                                     <li><a href="/inicioVertical?filtro=2">Semestre 2</a></li>

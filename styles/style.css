@@ -279,7 +279,7 @@ main a {
     margin-left: -100%;
     text-align: center;
     transition: 0.5s;
-    z-index: 1000;
+    z-index: 999999999999999999999999;
   }
   .menu ul {
     flex-direction: column;
@@ -316,6 +316,15 @@ main a {
     color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
+  }
+  .image__description{
+    font-size: 0.9rem;
+    
+  }
+  .image__title{
+    margin-top:0.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
 }
 
