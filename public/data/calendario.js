@@ -60,7 +60,7 @@ export function dataV(filtro) {
   return (data);
 }
 
-export function CalendH(data,tiempo) {
+export function CalendH(data) {
   const config = {
     header: {
       month: {
@@ -132,7 +132,7 @@ export function CalendH(data,tiempo) {
     <>
       <p id="text-calend">Desplácese a la izquierda si no visualiza los eventos</p>
       <div className="time-line-container">
-          <TimeLine data={data} config={config} mode={tiempo} nonEditableName={true}/>
+          <TimeLine data={data} config={config}/>
       </div>
       
       <ul className="legend">
@@ -196,7 +196,6 @@ export function dataH(filtro,bool) {
                   {
                     id: i,
                     name: items.eventos[i].titulo,
-                    description: items.eventos[i].descripcion,
                     start: new Date(año_inicio, mes_inicio - 1, dia_inicio),
                     end: new Date(año_fin, mes_fin - 1, dia_fin),
                     color: items.leyenda[j].color

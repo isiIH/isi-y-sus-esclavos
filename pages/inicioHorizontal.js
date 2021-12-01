@@ -22,13 +22,12 @@ const inicioHorizontal = () => {
     const [calendH, setCalendH] = useState();
     const [bool, setBool] = useState(false);
     const [mostrar, setMostrar] = useState(b1);
-    const [tiempo, setTiempo] = useState("month");
     
     useEffect(() => {
         if(router.query.filtro != undefined){
             var data = dataH(router.query.filtro,bool);
             if(data.length != 0){
-                setCalendH(CalendH(data,tiempo));
+                setCalendH(CalendH(data));
             } else {
                 setCalendH(
                     <div className="time-line-container">
@@ -43,7 +42,7 @@ const inicioHorizontal = () => {
                 setMostrar(b1);
             }
         }
-    },[router.query.filtro,tiempo,bool]);
+    },[router.query.filtro,bool]);
 
     return (
         <div className="contenedor-principal">
@@ -92,15 +91,6 @@ const inicioHorizontal = () => {
                 </header>
 
                 <div className="botones">
-                    <button className="boton" onClick={() => setTiempo("week")}>
-                        Semana
-                    </button>
-                    <button className="boton" onClick={() => setTiempo("month")}>
-                        Mes
-                    </button>
-                    <button className="boton" onClick={() => setTiempo("year")}>
-                        Año
-                    </button>
                     {mostrar}
                 </div>
 
