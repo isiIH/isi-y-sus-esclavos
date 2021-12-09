@@ -52,10 +52,6 @@ const Index = () => {
             <a href="https://github.com/isiIH/isi-y-sus-esclavos" target="_blank">
                 Repositorio
             </a>
-            <p>&nbsp;-&nbsp;</p>
-            <a href="/creditos" target="_blank">
-                Créditos
-            </a>
         </footer>
     </div>
     );
