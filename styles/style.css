@@ -37,12 +37,6 @@ body {
   flex-direction: column;
 }
 
-.contenedor-calendario-horizontal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .contenedor-imagenes {
   margin: 4rem;
   display: flex;
@@ -215,6 +209,12 @@ main a {
 .time-line-container {
   width: 90%;
   margin:15px auto;
+}
+#horizontal {
+  height: 30rem;
+}
+#vertical {
+  height: 35rem;
 }
 .volver{
   list-style: none;
